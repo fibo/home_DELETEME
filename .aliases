@@ -1,0 +1,7 @@
+
+alias clean_tmp='find /tmp/ -mindepth 1 -maxdepth 1 -user $USER -exec rm -rf {} \;'
+
+alias gs='git status'
+alias gl='git log'
+alias gc='git commit -a'
+
