@@ -6,6 +6,7 @@
 
     cd
     git init
+    git checkout -b home
     git remote add my https://github.com/fibo/home.git
     git pull my home
 
@@ -21,3 +22,11 @@
 Everything inside `$HOME` is ignored, so to add a file or a folder, for instance *.vimrc*, you need to modify *.gitignore* once
 
     echo '!.vimrc' >> .gitignore
+    git add .
+    git commit -m 'added .vimrc'
+    git push my home
+
+### Update
+
+    git pull my home
+
