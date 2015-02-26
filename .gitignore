@@ -3,3 +3,4 @@
 # ... except the following files
 !.bashrc
 !.gitignore
+!.vimrc
