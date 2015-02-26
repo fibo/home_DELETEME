@@ -11,6 +11,7 @@
     git pull my home
     git submodule update --init
     vim +PluginInstall +qall
+    cd -
     # You are done!
 
 ## Branches
