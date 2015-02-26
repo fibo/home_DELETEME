@@ -32,5 +32,8 @@ Everything inside `$HOME` is ignored, so to add a file or a folder, for instance
 
 ### Update
 
+    cd
     git pull my home
+    cd -
+    # You are done!
 
