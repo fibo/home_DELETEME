@@ -4,6 +4,12 @@
 
 ## Installation
 
+All you need is a one-liner, it takes few seconds
+
+    curl -L https://g14n.info/home/init.sh | bash
+
+or run the following equivalent commands manually
+
     cd
     git init
     git checkout -b home
@@ -16,8 +22,11 @@
 
 ## Branches
 
-* master: contains only this README.md file.
-* home: everything else, except README.md, to avoid showing it in your $HOME dir.
+|branch  |description                                                              |
+|--------|-------------------------------------------------------------------------|
+|master  |contains only this README.md file                                        |
+|gh-pages| contains the init.sh used in the one-liner installation                 |
+|home    | everything else, except README.md, to avoid showing it in your $HOME dir|
 
 ## How to
 
