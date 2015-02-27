@@ -3,3 +3,4 @@
 # ... except the following files
 !.gitignore
 !README.md
+!init.sh
