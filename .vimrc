@@ -34,6 +34,8 @@ Plugin 'mattn/gist-vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'baskerville/bubblegum'
 
+Plugin 'gabrielelana/vim-markdown'
+
 " Color scheme goodies. F8 switches the color.
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-colorscheme-switcher'
