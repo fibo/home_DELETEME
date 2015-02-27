@@ -43,6 +43,7 @@ Everything inside `$HOME` is ignored, so to add a file or a folder, for instance
 
     cd
     git pull my home
+    git submodule update
     cd -
     # You are done!
 
