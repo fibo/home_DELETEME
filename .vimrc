@@ -56,6 +56,7 @@ set t_Co=256
 set wildmenu        " enhanced command-line completion
 set laststatus=2    " always show status line
 
+set mouse=a
 
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
