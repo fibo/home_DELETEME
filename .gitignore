@@ -1,6 +1,7 @@
 # Ignore everything ...
 *
 # ... except the following files
+!.bash_logout
 !.bashrc
 !.gitignore
 !.vimrc
