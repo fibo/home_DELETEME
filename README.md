@@ -13,7 +13,7 @@ or run the following equivalent commands manually
 ```
 cd
 # Backup files and folders. 
-function backup_if_any () { [ -e $1 ] && mv -v $1 $1.orig; }
+function backup_if_any () { [ -e $1 ] && mv -v $1 $1.b4; }
 backup_if_any .bash_logout
 backup_if_any .bashrc
 backup_if_any .gitignore
@@ -33,6 +33,12 @@ vim +PluginInstall +qall
 # Back to previous folder.
 cd -
 # Init repo.
+```
+
+After installation is completed, optionally remove backup files.
+
+```
+rm -rf .*.orig
 ```
 
 ## Branches
