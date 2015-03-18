@@ -5,6 +5,7 @@ function backup_if_any () { [ -e $1 ] && mv -v $1 $1.orig; }
 backup_if_any .bash_logout
 backup_if_any .bashrc
 backup_if_any .gitignore
+backup_if_any .gitmodules
 backup_if_any .vimrc
 backup_if_any .aliases
 backup_if_any .software
