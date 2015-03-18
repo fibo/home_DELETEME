@@ -32,7 +32,7 @@ git submodule update --init
 vim +PluginInstall +qall
 # Back to previous folder.
 cd -
-# Init repo.
+# You are done!
 ```
 
 After installation is completed, optionally remove backup files.
