@@ -1,4 +1,8 @@
 
+" Autosource config on exit
+autocmd BufLeave $MYVIMRC :source $MYVIMRC
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " start Vundle config "
 """""""""""""""""""""""
@@ -33,6 +37,7 @@ Plugin 'mattn/gist-vim'
 
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'baskerville/bubblegum'
+Plugin 'sickill/vim-monokai'
 
 Plugin 'gabrielelana/vim-markdown'
 
@@ -50,7 +55,7 @@ filetype plugin indent on " required!
 " end Vundle config "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" if you are using vim from an ssh terminal, probably you should uncomment the line below
+" Better colors when using vim from an ssh terminal
 set t_Co=256
 
 set wildmenu        " enhanced command-line completion
