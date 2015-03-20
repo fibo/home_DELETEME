@@ -65,19 +65,19 @@ set showmatch     " set show matching parenthesis
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " my Perl preferences
-autocmd filetype perl map <F2> :%!perltidy<CR>                    " indent whole file
-autocmd filetype perl map <F3> :!prove -l<CR>                     " run tests
-autocmd filetype perl map <F4> :!prove -l --state=save<CR>        " run tests, stateful
-autocmd filetype perl map <F5> :!prove -l --state=save,failed<CR> " run only failed tests
-autocmd filetype perl setlocal autoindent
-autocmd filetype perl setlocal shiftwidth=4
-autocmd filetype perl setlocal tabstop=4
+au Filetype perl map <F2> :%!perltidy<CR>                    " indent whole file
+au Filetype perl map <F3> :!prove -l<CR>                     " run tests
+au Filetype perl map <F4> :!prove -l --state=save<CR>        " run tests, stateful
+au Filetype perl map <F5> :!prove -l --state=save,failed<CR> " run only failed tests
+autocmd Filetype perl setlocal autoindent
+autocmd Filetype perl setlocal shiftwidth=4
+autocmd Filetype perl setlocal tabstop=4
 
 " use perltidy for .pl, .pm, and .t
-au BufRead,BufNewFile *.pl setl equalprg=perltidy
-au BufRead,BufNewFile *.PL setl equalprg=perltidy
-au BufRead,BufNewFile *.pm setl equalprg=perltidy
-au BufRead,BufNewFile *.t  setl equalprg=perltidy
+autocmd BufRead,BufNewFile *.pl setlocal equalprg=perltidy
+autocmd BufRead,BufNewFile *.PL setlocal equalprg=perltidy
+autocmd BufRead,BufNewFile *.pm setlocal equalprg=perltidy
+autocmd BufRead,BufNewFile *.t  setlocal equalprg=perltidy
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
