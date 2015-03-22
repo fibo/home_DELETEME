@@ -69,6 +69,12 @@ set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" my JavaScript preferences
+autocmd Filetype javascript setlocal autoindent
+autocmd Filetype javascript setlocal shiftwidth=2
+autocmd Filetype javascript setlocal tabstop=2
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " my Perl preferences
 au Filetype perl map <F2> :%!perltidy<CR>                    " indent whole file
 au Filetype perl map <F3> :!prove -l<CR>                     " run tests
