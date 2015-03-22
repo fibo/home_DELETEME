@@ -4,3 +4,6 @@
 [submodule ".software"]
 	path = .software
 	url = https://github.com/fibo/.software.git
+[submodule ".bash/git-aware-prompt"]
+	path = .bash/git-aware-prompt
+	url = https://github.com/jimeh/git-aware-prompt
