@@ -30,16 +30,21 @@ Plugin 'majutsushi/tagbar'
 
 Plugin 'bling/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'fatih/vim-go'
 
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 
+" Languages
+Plugin 'AndrewRadev/vim-eco'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'fatih/vim-go'
+Plugin 'gabrielelana/vim-markdown'
+
+
+" Color schemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'baskerville/bubblegum'
 Plugin 'sickill/vim-monokai'
-
-Plugin 'gabrielelana/vim-markdown'
 
 " Color scheme goodies. F8 switches the color.
 Plugin 'xolox/vim-misc'
