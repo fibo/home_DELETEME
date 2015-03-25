@@ -73,6 +73,9 @@ set copyindent    " copy the previous indentation on autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 
+set shiftwidth=2
+set tabstop=2
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " my JavaScript preferences
 autocmd Filetype javascript setlocal autoindent
