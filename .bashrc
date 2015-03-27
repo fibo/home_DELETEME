@@ -15,6 +15,27 @@ if [ -f ~/.software/etc/profile ]; then
 	source ~/.software/etc/profile
 fi
 
+
+GITHUB_DIR=$HOME/github.com
+GITHUB_USER=$(git config github.user)
+
+##
+# GitHub clone repo util.
+#
+# @param {String} REPO_NAME
+gh-clone() {
+	REPO_NAME=$1
+
+	TARGET_DIR=$GITHUB_DIR/$GITHUB_USER
+	mkdir -p $TARGET_DIR
+
+	REPO_URL=git@github.com:$GITHUB_USER/${REPO_NAME}.git
+
+	cd $TARGET_DIR
+	git clone $REPO_URL
+	cd $REPO_NAME
+}
+
 source ~/.aliases
 
 # How to use an ssh-agent:
