@@ -25,6 +25,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'ervandew/supertab'
 Plugin 'walm/jshint.vim'
 
+Plugin 'mhinz/vim-startify'
+
 " Needs ctags. Launch .software_install ctags
 Plugin 'majutsushi/tagbar'
 
@@ -44,6 +46,7 @@ Plugin 'gabrielelana/vim-markdown'
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'baskerville/bubblegum'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'sickill/vim-monokai'
 
 " Color scheme goodies. F8 switches the color.
