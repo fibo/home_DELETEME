@@ -45,6 +45,12 @@ gh-clone() {
 
 	cd $TARGET_DIR
 	git clone $REPO_URL && cd $REPO_NAME
+
+	# Run `npm install` if it is a Node project.
+	if [ -e package.json ]
+	then
+		npm install
+	fi
 }
 
 source ~/.aliases
