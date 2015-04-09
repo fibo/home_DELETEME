@@ -63,6 +63,12 @@ filetype plugin indent on " required!
 " end Vundle config "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+set list
+
+" Define characters to show when you show formatting
+set listchars=tab:\|\ ,trail:-,extends:>,precedes:<,nbsp:+
+
+
 " Better colors when using vim from an ssh terminal
 set t_Co=256
 
@@ -82,7 +88,8 @@ set shiftwidth=2
 " my JavaScript preferences
 autocmd Filetype javascript setlocal autoindent
 autocmd Filetype javascript setlocal shiftwidth=2
-autocmd Filetype javascript setlocal tabstop=2
+autocmd Filetype javascript setlocal softtabstop=2
+autocmd Filetype javascript setlocal expandtab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " my Perl preferences
@@ -92,7 +99,8 @@ au Filetype perl map <F4> :!prove -l --state=save<CR>        " run tests, statef
 au Filetype perl map <F5> :!prove -l --state=save,failed<CR> " run only failed tests
 autocmd Filetype perl setlocal autoindent
 autocmd Filetype perl setlocal shiftwidth=4
-autocmd Filetype perl setlocal tabstop=4
+autocmd Filetype perl setlocal softtabstop=4
+autocmd Filetype perl setlocal expandtab
 
 " use perltidy for .pl, .pm, and .t
 autocmd BufRead,BufNewFile *.pl setlocal equalprg=perltidy
