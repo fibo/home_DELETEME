@@ -2,8 +2,7 @@
 " Autosource config on exit
 autocmd BufLeave $MYVIMRC :source $MYVIMRC
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " start Vundle config "
 """""""""""""""""""""""
 set nocompatible      " be iMproved
@@ -18,13 +17,14 @@ call vundle#begin()
 " required!
 Plugin 'gmarik/Vundle.vim'
 
-"""""
+"""""""""""""""""""""
 " my plugin list here
 
 Plugin 'godlygeek/tabular'
 Plugin 'ervandew/supertab'
 Plugin 'walm/jshint.vim'
 
+Plugin 'tpope/vim-surround'
 Plugin 'mhinz/vim-startify'
 
 " Needs ctags. Launch .software_install ctags
@@ -61,13 +61,81 @@ filetype plugin indent on " required!
 
 """""""""""""""""""""
 " end Vundle config "
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set gvim window size
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" See http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window.
+  set lines=40 columns=177
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use UTF-8 encoding
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set encoding=utf8
+set termencoding=utf-8
+set fileencodings=        " don't do any encoding conversion
+set guifontwide=MingLiU:h10
+" set guifont=Source_Code_Pro_Semibold:h9:cANSI
+set guifont=Consolas:h11:cANSI
+" set guifont=Ubuntu_Mono:h12:cANSI
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable list
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set number
 
 set list
 
 " Define characters to show when you show formatting
 set listchars=tab:\|\ ,trail:-,extends:>,precedes:<,nbsp:+
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" More natural split opening
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set splitbelow
+set splitright
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Better search
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set smarttab   " insert tabs on the start of a line according to
+               "   shiftwidth, not tabstop
+set hlsearch   " highlight search terms
+set incsearch  " show search matches as you type
+set smartcase  " ignore case if search pattern is all lowercase,
+               "   case-sensitive otherwise
+set ignorecase " ignore case when searching
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enhanced cursor
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set cursorcolumn
+set cursorline
+"if version >= 703
+if exists('+colorcolumn')
+  set colorcolumn=80
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Easier split navigations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " Better colors when using vim from an ssh terminal
 set t_Co=256
@@ -81,8 +149,6 @@ set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
-
-set shiftwidth=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " my JavaScript preferences
