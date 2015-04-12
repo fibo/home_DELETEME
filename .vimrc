@@ -43,6 +43,7 @@ Plugin 'AndrewRadev/vim-eco'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'fatih/vim-go'
 Plugin 'gabrielelana/vim-markdown'
+Plugin 'nikvdp/ejs-syntax'
 
 
 " Color schemes
