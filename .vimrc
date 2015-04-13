@@ -96,7 +96,7 @@ set nowrap
 set list
 
 " Define characters to show when you show formatting
-set listchars=tab:\|\ ,trail:-,extends:>,precedes:<,nbsp:+
+set listchars=tab:\|\ ,trail:☠,extends:>,precedes:<,nbsp:+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " More natural split opening
