@@ -38,6 +38,8 @@ git remote add my https://github.com/fibo/home.git
 git pull my home
 git submodule update --init
 vim +PluginInstall +qall
+# Load changes into current session
+source ~/.bash_profile
 # Back to previous folder.
 cd -
 # You are done!
