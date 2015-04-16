@@ -2,6 +2,14 @@
 
 > not only dotfiles
 
+## Requirements
+
+Requires *bash*, *curl*, *git* and *vim*. On Centos 7 launch
+
+```
+# yum install -y bash curl git vim
+```
+
 ## Installation
 
 All you need is a one-liner, it takes few seconds
