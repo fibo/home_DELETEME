@@ -34,7 +34,7 @@ gh-clone() {
 
 	if [ -z "$GITHUB_USER" ]
 	then
-		read -s -p "Enter your github.user: " GITHUB_USER
+		read -p "Enter your github.user: " GITHUB_USER
 		git config --global github.user $GITHUB_USER
 	fi
 
