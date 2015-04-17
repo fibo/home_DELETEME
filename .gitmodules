@@ -9,4 +9,4 @@
 	url = https://github.com/jimeh/git-aware-prompt
 [submodule ".bash/gh-clone"]
 	path = .bash/gh-clone
-	url = http://github.com/fibo/gh-clone.git
+	url = https://github.com/fibo/gh-clone.git
