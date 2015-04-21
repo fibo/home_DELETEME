@@ -1,8 +1,9 @@
 # Ignore everything ...
 *
 # ... except the following files
+!.aliases
 !.bash_logout
 !.bashrc
+!.completion
 !.gitignore
 !.vimrc
-!.aliases
