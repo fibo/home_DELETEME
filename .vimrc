@@ -139,6 +139,8 @@ nnoremap <C-H> <C-W><C-H>
 
 " Better colors when using vim from an ssh terminal
 set t_Co=256
+" My favourite colorscheme
+colorscheme bubblegum-256-dark
 
 set wildmenu        " enhanced command-line completion
 set laststatus=2    " always show status line
