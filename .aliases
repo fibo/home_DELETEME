@@ -11,6 +11,9 @@ alias gpl='git pull'
 alias gps='git push'
 alias gs='git status'
 
+alias gh-pages-push='git subtree --prefix gh-pages push origin gh-pages'
+alias gh-pages-pull='git subtree --prefix gh-pages pull origin gh-pages'
+
 alias l='ls -lrth'
 alias ll='ls -lrtha'
 
