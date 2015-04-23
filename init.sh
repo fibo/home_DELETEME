@@ -2,6 +2,7 @@
 cd
 # Backup files and folders.
 function backup_if_any () { [ -e $1 ] && mv -v $1 $1.orig; }
+backup_if_any .bash
 backup_if_any .bash_logout
 backup_if_any .bashrc
 backup_if_any .gitignore
