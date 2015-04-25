@@ -15,7 +15,7 @@ backup_if_any .git
 # Init repo.
 git init
 git checkout -b home
-git remote add my git@github.com:fibo/home.git
+git remote add my https://github.com/fibo/home.git
 git pull my home
 git submodule update --init
 vim +PluginInstall +qall
