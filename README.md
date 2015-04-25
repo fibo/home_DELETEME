@@ -22,6 +22,14 @@ After installation is completed, optionally remove backup files.
 rm -rf .*.orig
 ```
 
+### Optional
+
+* Add **my** own home as a remote
+: After adding an ssh key, following this instructions about how to add [SSH public key based authentication](http://g14n.info/2013/04/getting-started-with-git-shell/#ssh-public-key-based-authentication), I use to add my own remote home. Yes, the repo remote set in the *init.sh* is a generic one, which can be used by anybody, but it does't let you to do `git push my home` to update remote with modifications. I just launch  
+
+    $ git remote rm my
+    $ git remote add my git@github.com:fibo/home.git
+
 ## Branches
 
 |branch  |description                                                              |
