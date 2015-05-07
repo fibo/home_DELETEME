@@ -29,6 +29,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'mhinz/vim-startify'
 
+Plugin 'mileszs/ack.vim'
+
 " Needs ctags. Launch .software_install ctags
 Plugin 'majutsushi/tagbar'
 
