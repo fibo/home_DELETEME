@@ -37,6 +37,10 @@ Plugin 'majutsushi/tagbar'
 Plugin 'bling/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
 
+" Run :VimProcInstall once before running :VimShell
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/vimshell.vim'
+
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 
@@ -47,12 +51,12 @@ Plugin 'fatih/vim-go'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'nikvdp/ejs-syntax'
 
-
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'baskerville/bubblegum'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'sickill/vim-monokai'
+Plugin 'trapd00r/neverland-vim-theme'
 
 " Color scheme goodies. F8 switches the colorscheme.
 Plugin 'xolox/vim-misc'
