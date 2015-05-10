@@ -29,11 +29,17 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'mhinz/vim-startify'
 
+Plugin 'mileszs/ack.vim'
+
 " Needs ctags. Launch .software_install ctags
 Plugin 'majutsushi/tagbar'
 
 Plugin 'bling/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
+
+" Run :VimProcInstall once before running :VimShell
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/vimshell.vim'
 
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
@@ -45,12 +51,12 @@ Plugin 'fatih/vim-go'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'nikvdp/ejs-syntax'
 
-
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'baskerville/bubblegum'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'sickill/vim-monokai'
+Plugin 'trapd00r/neverland-vim-theme'
 
 " Color scheme goodies. F8 switches the colorscheme.
 Plugin 'xolox/vim-misc'
@@ -137,6 +143,17 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" History
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set history=1000    " remember more commands and search history
+set undolevels=1000 " use many muchos levels of undo
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Miscellanea
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Better colors when using vim from an ssh terminal
 set t_Co=256
 " My favourite colorscheme
@@ -144,6 +161,9 @@ colorscheme bubblegum-256-dark
 
 set wildmenu        " enhanced command-line completion
 set laststatus=2    " always show status line
+
+" Use F12 to toggle auto-indenting for text paste
+set pastetoggle=<F12>
 
 set mouse=a
 
@@ -154,6 +174,8 @@ set showmatch     " set show matching parenthesis
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " my JavaScript preferences
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 autocmd Filetype javascript setlocal autoindent
 autocmd Filetype javascript setlocal shiftwidth=2
 autocmd Filetype javascript setlocal softtabstop=2
@@ -161,10 +183,12 @@ autocmd Filetype javascript setlocal expandtab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " my Perl preferences
-au Filetype perl map <F2> :%!perltidy<CR>                    " indent whole file
-au Filetype perl map <F3> :!prove -l<CR>                     " run tests
-au Filetype perl map <F4> :!prove -l --state=save<CR>        " run tests, stateful
-au Filetype perl map <F5> :!prove -l --state=save,failed<CR> " run only failed tests
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+autocmd Filetype perl map <F2> :%!perltidy<CR>                    " indent whole file
+autocmd Filetype perl map <F3> :!prove -l<CR>                     " run tests
+autocmd Filetype perl map <F4> :!prove -l --state=save<CR>        " run tests, stateful
+autocmd Filetype perl map <F5> :!prove -l --state=save,failed<CR> " run only failed tests
 autocmd Filetype perl setlocal autoindent
 autocmd Filetype perl setlocal shiftwidth=4
 autocmd Filetype perl setlocal softtabstop=4
@@ -176,6 +200,11 @@ autocmd BufRead,BufNewFile *.PL setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.pm setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.t  setlocal equalprg=perltidy
 
+" Syntastic
+" let g:syntastic_enable_perl_checker = 1
+" au BufRead,BufNewFile *.t let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'test'"
+" au BufRead,BufNewFile *.pl let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'script'"
+" au BufRead,BufNewFile *.pm let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'module'"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Format Go source files when they are saved
