@@ -19,9 +19,6 @@ source ~/.bash/gh-clone/fun.sh
 
 source ~/.aliases
 
-source ~/.completion/git-completion.bash
-source ~/.completion/npm-completion.bash
-
 # How to use an ssh-agent:
 #
 # 1. Create an ssh key, see
