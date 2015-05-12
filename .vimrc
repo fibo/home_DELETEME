@@ -33,13 +33,19 @@ Plugin 'mileszs/ack.vim'
 
 " Needs ctags. Launch .software_install ctags
 Plugin 'majutsushi/tagbar'
+Plugin 'vim-scripts/Autotag'
 
 Plugin 'bling/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
 
+Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+Plugin 'scrooloose/syntastic'
+
 " Run :VimProcInstall once before running :VimShell
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/vimshell.vim'
+" Plugin 'Shougo/vimproc.vim'
+" Plugin 'Shougo/vimshell.vim'
 
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
@@ -151,13 +157,38 @@ set history=1000    " remember more commands and search history
 set undolevels=1000 " use many muchos levels of undo
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tagbar
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:tagbar_autoclose = 1
+let g:tagbar_iconchars = ['▸', '▾']
+let g:tagbar_autopreview = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Miscellanea
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Better colors when using vim from an ssh terminal
 set t_Co=256
 " My favourite colorscheme
-colorscheme bubblegum-256-dark
+try
+	colorscheme bubblegum-256-dark
+catch
+	colorscheme desert
+endtry
 
 set wildmenu        " enhanced command-line completion
 set laststatus=2    " always show status line
@@ -200,9 +231,33 @@ autocmd BufRead,BufNewFile *.PL setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.pm setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.t  setlocal equalprg=perltidy
 
+" Tagbar settings to recognise Perl Moo..Moose
+" taken from https://gist.github.com/jbolila/7598018
+let g:tagbar_type_perl = {
+    \ 'ctagstype'   : 'Perl',
+    \ 'kinds' : [
+        \ 'p:packages:1:0',
+        \ 'u:uses:1:0',
+        \ 'r:requires:1:0',
+        \ 'e:extends',
+        \ 'w:roles',
+        \ 'o:ours:1:0',
+        \ 'c:constants:1:0',
+        \ 'f:formats:1:0',
+        \ 'a:attributes',
+        \ 's:subroutines',
+        \ 'x:around:1:0',
+        \ 'l:aliases',
+        \ 'd:pod:1:0',
+    \ ],
+\ }
+
 " Syntastic
-" let g:syntastic_enable_perl_checker = 1
-" au BufRead,BufNewFile *.t let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'test'"
+let g:syntastic_enable_perl_checker = 1
+let g:syntastic_perl_checkers = [ 'perl' ]
+let g:syntastic_perl_lib_path = [ './lib' ]
+
+" au BufRead,BufNewFile *.t let  g:syntastic_perl_perlcritic_args="--severity 4 --theme 'test'"
 " au BufRead,BufNewFile *.pl let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'script'"
 " au BufRead,BufNewFile *.pm let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'module'"
 
