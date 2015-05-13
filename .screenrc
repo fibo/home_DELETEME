@@ -1,0 +1,2 @@
+vbell off     # Turns visual bell off
+shell -$SHELL # load shell profile
