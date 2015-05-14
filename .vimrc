@@ -21,7 +21,6 @@ Plugin 'gmarik/Vundle.vim'
 " my plugin list here
 
 Plugin 'godlygeek/tabular'
-Plugin 'ervandew/supertab'
 Plugin 'walm/jshint.vim'
 
 Plugin 'Shougo/unite.vim'
@@ -68,6 +67,8 @@ Plugin 'trapd00r/neverland-vim-theme'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-colorscheme-switcher'
 " try Plugin 'Taverius/vim-colorscheme-manager'
+
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 
@@ -154,7 +155,7 @@ nnoremap <C-H> <C-W><C-H>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set history=1000    " remember more commands and search history
-set undolevels=1000 " use many muchos levels of undo
+set undolevels=1000 " use many much levels of undo
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar
@@ -182,6 +183,16 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Insert current date in yyyy-mm-dd format with \d while in insert mode,
+" useful for comments and Changelogs.
+" Credits to Tom Wyant
+" http://blogs.perl.org/users/neilb/2013/09/a-convention-for-changes-files.html#comment-1154925
+:inoremap <leader>d <C-R>=strftime("%Y-%m-%d")<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Miscellanea
