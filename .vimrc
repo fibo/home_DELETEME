@@ -43,20 +43,26 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'scrooloose/syntastic'
 
 " Run :VimProcInstall once before running :VimShell
-" Plugin 'Shougo/vimproc.vim'
-" Plugin 'Shougo/vimshell.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/vimshell.vim'
 
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 
 " Languages
+"""""""""""
 Plugin 'AndrewRadev/vim-eco'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'fatih/vim-go'
 Plugin 'gabrielelana/vim-markdown'
 Plugin 'nikvdp/ejs-syntax'
 
+" Typescript
+Plugin 'Quramy/tsuquyomi'
+Plugin 'leafgarland/typescript-vim'
+
 " Color schemes
+"""""""""""""""
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'baskerville/bubblegum'
 Plugin 'flazz/vim-colorschemes'
@@ -221,7 +227,7 @@ set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" my JavaScript preferences
+" My JavaScript preferences
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd Filetype javascript setlocal autoindent
@@ -230,7 +236,7 @@ autocmd Filetype javascript setlocal softtabstop=2
 autocmd Filetype javascript setlocal expandtab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" my Perl preferences
+" My Perl preferences
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd Filetype perl map <F2> :%!perltidy<CR>                    " indent whole file
