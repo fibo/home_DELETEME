@@ -23,4 +23,9 @@ alias vi='vim'
 alias sls='screen -ls'
 alias s='screen'
 alias S='screen -S'
+alias sx='screen -x'
+
+# Do not user sudo, use ssh to switch user
+#     u user
+alias u='ssh localhost -l'
 
