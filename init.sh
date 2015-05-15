@@ -2,6 +2,7 @@
 cd
 # Backup files and folders.
 function backup_if_any () { [ -e $1 ] && mv -v $1 $1.orig; }
+
 backup_if_any .bash
 backup_if_any .bash_logout
 backup_if_any .bashrc
@@ -12,13 +13,17 @@ backup_if_any .aliases
 backup_if_any .software
 backup_if_any .vim
 backup_if_any .git
+
 # Init repo.
 git init
 git checkout -b home
 git remote add my https://github.com/fibo/home.git
 git pull my home
 git submodule update --init
+
 vim +PluginInstall +qall
+vim +VimProcInstall
+
 # Basic git configuration prompt
 ## git user.name
 GIT_USER=$(git config --global user.name)
