@@ -6,10 +6,12 @@ function backup_if_any () { [ -e $1 ] && mv -v $1 $1.orig; }
 backup_if_any .bash
 backup_if_any .bash_logout
 backup_if_any .bashrc
+backup_if_any .ctags
 backup_if_any .gitignore
 backup_if_any .gitmodules
 backup_if_any .vimrc
 backup_if_any .aliases
+backup_if_any .screenrc
 backup_if_any .software
 backup_if_any .vim
 backup_if_any .git
