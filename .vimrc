@@ -63,6 +63,7 @@ Plugin 'leafgarland/typescript-vim'
 
 " Color schemes
 """""""""""""""
+Plugin 'chriskempson/base16-vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'baskerville/bubblegum'
 Plugin 'flazz/vim-colorschemes'
@@ -203,6 +204,11 @@ let g:syntastic_check_on_wq = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Miscellanea
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" disable beeping and flashing
+" see http://vim.wikia.com/wiki/Disable_beeping
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 " Better colors when using vim from an ssh terminal
 set t_Co=256
@@ -227,7 +233,7 @@ set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" My JavaScript preferences
+" JavaScript
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd Filetype javascript setlocal autoindent
@@ -235,8 +241,15 @@ autocmd Filetype javascript setlocal shiftwidth=2
 autocmd Filetype javascript setlocal softtabstop=2
 autocmd Filetype javascript setlocal expandtab
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" My Perl preferences
+" CoffeeScript
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufRead,BufNewFile *.coffee set filetype=coffee
+autocmd BufRead,BufNewFile *.coffee.md set filetype=coffee
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Perl
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 autocmd Filetype perl map <F2> :%!perltidy<CR>                    " indent whole file
@@ -284,8 +297,11 @@ let g:syntastic_perl_lib_path = [ './lib' ]
 " au BufRead,BufNewFile *.pl let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'script'"
 " au BufRead,BufNewFile *.pm let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'module'"
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Format Go source files when they are saved
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Golang
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType go autocmd BufWritePre <buffer> GoFmt
 
 " gocode: An autocompletion daemon for the Go programming language

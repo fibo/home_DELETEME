@@ -10,3 +10,6 @@
 [submodule ".bash/gh-clone"]
 	path = .bash/gh-clone
 	url = https://github.com/fibo/gh-clone.git
+[submodule ".bash/base16-shell"]
+	path = .bash/base16-shell
+	url = git@github.com:chriskempson/base16-shell.git
