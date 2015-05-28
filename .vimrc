@@ -40,6 +40,8 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
+Plugin 'myusuf3/numbers.vim'
+
 Plugin 'scrooloose/syntastic'
 
 " Run :VimProcInstall once before running :VimShell
@@ -172,14 +174,21 @@ let g:tagbar_iconchars = ['▸', '▾']
 let g:tagbar_autopreview = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Airline
+" Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Plugin 'myusuf3/numbers.vim'
+""""""""""""""""""""""""""""""
+
+let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree']
+
+" Plugin 'bling/vim-airline'
+""""""""""""""""""""""""""""
 
 let g:airline#extensions#tabline#enabled = 1
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin 'scrooloose/syntastic'
+"""""""""""""""""""""""""""""""
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
