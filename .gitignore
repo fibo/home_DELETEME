@@ -2,7 +2,8 @@
 *
 # ... except the following files and folders
 !.aliases
-!.bash/
+!.ctags
+!.bash
 !.bash_logout
 !.bashrc
 !.completion
@@ -10,3 +11,5 @@
 !.gitignore
 !.screenrc
 !.vimrc
+!.zsh
+!.zshrc

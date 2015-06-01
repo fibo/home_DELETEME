@@ -33,3 +33,5 @@ alias sx='screen -x'
 #     u user
 alias u='ssh localhost -l'
 
+alias z=zsh
+
