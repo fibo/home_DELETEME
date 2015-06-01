@@ -1,7 +1,7 @@
 
-alias clean_tmp='find /tmp/ -mindepth 1 -maxdepth 1 -user $USER -exec rm -rf {} \;'
+alias clean_tmp='find /tmp/ -mindepth 1 -maxdepth 1 -user $USER -exec rm -vrf {} \;'
 
-alias ga='git add .; git status'
+alias ga='git add .; git number'
 alias gb='git branch'
 alias gc='git commit'
 alias gcb='git checkout -b'
@@ -10,10 +10,11 @@ alias gl='git log'
 alias gm='git merge'
 alias gn='git number'
 alias gna='git number add'
+alias gnb='git number blame'
 alias gpl='git pull'
 alias gps='git push'
 alias gs='git number' # same as git status, plus numbered files
-alias vn='git number -c vi'
+alias vn='git number -c vim'
 
 alias gh-pages-push='git subtree --prefix gh-pages push origin gh-pages'
 alias gh-pages-pull='git subtree --prefix gh-pages pull origin gh-pages'
@@ -28,7 +29,7 @@ alias s='screen'
 alias S='screen -S'
 alias sx='screen -x'
 
-# Do not user sudo, use ssh to switch user
+# Do not use sudo, use ssh to switch user
 #     u user
 alias u='ssh localhost -l'
 
