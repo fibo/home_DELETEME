@@ -1,5 +1,6 @@
 #!bin/bash
 cd
+
 # Backup files and folders.
 BACKUP_DAY=$(date +%F)
 BACKUP_DIR=$HOME/.home_backup.$BACKUP_DAY
@@ -8,7 +9,11 @@ function backup_if_any () { [ -e $1 ] && mv -v $1 $BACKUP_DIR/$1.$BACKUP_DAY; }
 backup_if_any .gitignore
 backup_if_any .gitmodules
 
-grep ! .gitignore | cut -d ! -f2- | while read x do;
+grep ! .gitignore | cut -d ! -f2 | while read x do;
+    backup_if_any $x
+done
+
+grep path .gitmodules | cut -d = -f2  | while read x do;
     backup_if_any $x
 done
 
