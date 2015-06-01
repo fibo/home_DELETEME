@@ -8,12 +8,10 @@ alias gcb='git checkout -b'
 alias gd='git diff'
 alias gl='git log'
 alias gm='git merge'
-alias gn='git number'
 alias gna='git number add'
-alias gnc='git number checkout --'
 alias gpl='git pull'
 alias gps='git push'
-alias gs='git status'
+alias gs='git number' # same as git status, plus numbered files
 
 alias gh-pages-push='git subtree --prefix gh-pages push origin gh-pages'
 alias gh-pages-pull='git subtree --prefix gh-pages pull origin gh-pages'
