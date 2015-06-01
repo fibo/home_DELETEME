@@ -16,6 +16,7 @@ if [ -f ~/.software/etc/profile ]; then
 fi
 
 source ~/.bash/gh-clone/fun.sh
+export PATH=~/.bash/git-number:$PATH
 
 source ~/.aliases
 
