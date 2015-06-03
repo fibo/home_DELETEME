@@ -19,7 +19,7 @@ source .zsh/antigen/antigen.zsh
 
 antigen-use oh-my-zsh
 antigen-bundle arialdomartini/oh-my-git
-antigen theme arialdomartini/oh-my-git-themes oppa-lana-style
+antigen theme arialdomartini/oh-my-git-themes arialdo-granzestyle
 
 # Load the oh-my-zsh's library.
 #antigen use oh-my-zsh
@@ -40,4 +40,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # Tell antigen that you're done.
 antigen apply
 ###############################################################################
+
+source .aliases
 
