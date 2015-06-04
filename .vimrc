@@ -114,7 +114,7 @@ set guifont=Consolas:h11:cANSI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set number
-set nowrap
+set wrap
 set list
 
 " Define characters to show when you show formatting
