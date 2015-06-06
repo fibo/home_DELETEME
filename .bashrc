@@ -4,7 +4,7 @@ source $GITAWAREPROMPT/main.sh
 
 # Play well with others, source global definitions.
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+	source /etc/bashrc
 fi
 
 export PS1="\u@\h \w \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
