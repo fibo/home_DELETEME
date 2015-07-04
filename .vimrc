@@ -114,11 +114,13 @@ set guifont=Consolas:h11:cANSI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set number
-set wrap
 set list
 
 " Define characters to show when you show formatting
 set listchars=tab:\|\ ,trail:☠,extends:>,precedes:<,nbsp:+
+
+" it is ok to wrap lines, just use gj or gk to move
+set wrap
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " More natural split opening
