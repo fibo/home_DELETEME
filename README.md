@@ -22,7 +22,7 @@ On Ubuntu launch
 
 All you need is a one-liner, it takes few seconds
 
-    curl -L http://g14n.info/home/init.sh | bash
+    curl -L https://g14n.info/home/init.sh | bash
 
 After installation is completed, optionally remove backup files.
 
