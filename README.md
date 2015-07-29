@@ -4,10 +4,18 @@
 
 ## Requirements
 
-Requires *bash*, *curl*, *git* and *vim*. On Centos 7 launch
+Requires *bash*, *curl*, *git* and *vim*.
+
+On Centos launch
 
 ```
 # yum install -y bash curl git vim
+```
+
+On Ubuntu launch
+
+```
+# apt-get install -y bash curl git vim
 ```
 
 ## Installation
