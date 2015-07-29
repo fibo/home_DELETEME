@@ -9,13 +9,13 @@ function backup_if_any () { [ -e $1 ] && mv -v $1 $BACKUP_DIR/$1.$BACKUP_DAY; }
 backup_if_any .gitignore
 backup_if_any .gitmodules
 
-grep ! .gitignore | cut -d ! -f2 | while read x do;
-    backup_if_any $x
-done
+curl -L https://raw.githubusercontent.com/fibo/home/home/.gitignore \
+    | grep ! | cut -d ! -f2 \
+        | while read x; do backup_if_any $x; done
 
-grep path .gitmodules | cut -d = -f2  | while read x do;
-    backup_if_any $x
-done
+curl -L https://raw.githubusercontent.com/fibo/home/home/.gitmodules \
+    | grep path | cut -d = -f2 \
+        | while read x; do backup_if_any $x; done
 
 # Init repo.
 git init
