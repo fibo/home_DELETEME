@@ -43,6 +43,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'myusuf3/numbers.vim'
 
 Plugin 'scrooloose/syntastic'
+Plugin 'myint/syntastic-extras'
 
 " Run :VimProcInstall once before running :VimShell
 Plugin 'Shougo/vimproc.vim'
@@ -200,7 +201,9 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+
+" Block ZZ if there are syntax errors.
+nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
