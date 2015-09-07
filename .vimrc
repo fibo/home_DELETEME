@@ -61,8 +61,8 @@ Plugin 'gabrielelana/vim-markdown'
 Plugin 'nikvdp/ejs-syntax'
 
 " Typescript
-Plugin 'Quramy/tsuquyomi'
-Plugin 'leafgarland/typescript-vim'
+" Plugin 'Quramy/tsuquyomi'
+" Plugin 'leafgarland/typescript-vim'
 
 " Color schemes
 """""""""""""""
