@@ -45,6 +45,6 @@ then
 fi
 
 # Load changes into current session
-source ~/.bash_profile
+source ~/.bashrc
 # Back to previous folder.
 cd -
