@@ -4,6 +4,7 @@ cd
 # Backup files and folders.
 BACKUP_DAY=$(date +%F)
 BACKUP_DIR=$HOME/.home_backup.$BACKUP_DAY
+mkdir -p $BACKUP_DIR
 function backup_if_any () { [ -e $1 ] && mv -v $1 $BACKUP_DIR/$1.$BACKUP_DAY; }
 
 backup_if_any .gitignore
