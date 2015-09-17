@@ -4,19 +4,12 @@
 
 ## Requirements
 
-Requires *bash*, *curl*, *git* and *vim*.
+Requires *bash*, *curl*, *git* and *vim*. Depending on your OS, launch with root privilegies
 
-On Centos launch
-
-```
-# yum install -y bash curl git vim
-```
-
-On Ubuntu launch
-
-```
-# apt-get install -y bash curl git vim
-```
+* On Centos
+ : `yum install -y bash curl git vim`
+* On Ubuntu
+: `apt-get install -y bash curl git vim`
 
 ## Installation
 
@@ -36,14 +29,15 @@ After installation is completed, optionally remove backup files.
     git remote rm my
     git remote add my git@github.com:fibo/home.git
 
+The repo remote set in the [init.sh][1] is a generic one, which can be used by anybody, but it doesn't let you to do `git push my home` to update remote with modifications. I just launch
 
-The repo remote set in the [init.sh][1] is a generic one, which can be used by anybody, but it doesn't let you to do `git push my home` to update remote with modifications. I just launch  
+    git pull my home
 
 ## Branches
 
 |branch  |description                                                              |
 |--------|-------------------------------------------------------------------------|
-|master  |contains only this README.md file                                        |
+|master  | contains only this README.md file                                       |
 |gh-pages| contains the *init.sh* used in the one-liner installation               |
 |home    | everything else, except README.md, to avoid showing it in your $HOME dir|
 
