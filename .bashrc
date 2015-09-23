@@ -35,10 +35,9 @@ source ~/.shell/profile
 #
 #    but, do NOT leave the passphrase empty.
 #
-# 2. Copy script from
+# 2. Copy script
 #
-#    https://help.github.com/articles/working-with-ssh-key-passphrases/
-#
+#    from ~/.bash/ssh-agent
 #    to ~/.ssh/agent
 #
 if [ -f ~/.ssh/agent ]; then
