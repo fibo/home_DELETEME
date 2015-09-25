@@ -48,3 +48,5 @@ fi
 source ~/.bashrc
 # Back to previous folder.
 cd -
+
+echo home sweet home
