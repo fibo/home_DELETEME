@@ -19,6 +19,10 @@ All you need is a one-liner, it takes few seconds
 curl -L https://g14n.info/home/init.sh | bash
 ```
 
+### Troubleshooting
+
+If you are behind a firewall, try setting `HTTPS_PROXY` variable. If https scheme does not work, do not try with http scheme cause is not supported by *home*.
+
 ### Optional
 
 * Add **my** own home as a remote
