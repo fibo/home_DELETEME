@@ -10,6 +10,7 @@ Requires *bash*, *curl*, *git* and *vim*. Depending on your OS, launch with root
 : `yum install -y bash curl git vim`
 * On Ubuntu
 : `apt-get install -y bash curl git vim`
+* On OS X, requirements are already installed
 
 ## Installation
 
