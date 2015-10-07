@@ -45,12 +45,15 @@ Plugin 'myusuf3/numbers.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'myint/syntastic-extras'
 
+""" Should be deprecated in favor of neovim.
 " Run :VimProcInstall once before running :VimShell
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/vimshell.vim'
+" Plugin 'Shougo/vimproc.vim'
+" Plugin 'Shougo/vimshell.vim'
 
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
+
+Plugin 'jiangmiao/auto-pairs'
 
 " Languages
 """""""""""

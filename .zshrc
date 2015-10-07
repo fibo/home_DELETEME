@@ -15,7 +15,7 @@ compinit
 
 # start antigen configuration
 ###############################################################################
-source .zsh/antigen/antigen.zsh
+source ~/.zsh/antigen/antigen.zsh
 
 antigen-use oh-my-zsh
 antigen-bundle arialdomartini/oh-my-git
