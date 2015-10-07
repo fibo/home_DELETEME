@@ -41,6 +41,5 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 ###############################################################################
 
-source ~/.shell/aliases
 source ~/.shell/profile
 
