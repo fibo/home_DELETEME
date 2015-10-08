@@ -41,6 +41,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
 ###############################################################################
 
+# Use vi key bindings
+bindkey -v
+
 source ~/.shell/aliases
 source ~/.shell/profile
 

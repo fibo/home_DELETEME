@@ -7,15 +7,17 @@ if [ -f /etc/bashrc ]; then
 	source /etc/bashrc
 fi
 
-export PS1="\u@\h \w \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export PS1="\u@\h \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
-export EDITOR=vim
+# Use vi key bindings
+set -o vi
 
 if [ -f ~/.software/etc/profile ]; then
 	source ~/.software/etc/profile
 fi
 
 source ~/.bash/gh-clone/fun.sh
+
 export PATH=~/.bash/git-number:$PATH
 
 # Base16 Shell, pick a random theme
