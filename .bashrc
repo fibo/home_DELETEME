@@ -26,7 +26,6 @@ BASE16_SHELL_FAVOURITE_THEMES=("mocha.dark" "eighties.dark" "ocean.dark")
 # base16_colortest alias works, write base16_next_theme
 BASE16_SHELL_THEME=${BASE16_SHELL_FAVOURITE_THEMES[$RANDOM % ${#BASE16_SHELL_FAVOURITE_THEMES[@]} ]}
 
-source ~/.shell/aliases
 source ~/.shell/profile
 
 # How to use an ssh-agent:

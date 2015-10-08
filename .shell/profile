@@ -1,3 +1,7 @@
 
 export EDITOR=vim
 
+source ~/.shell/aliases
+
+source ~/.shell/completion/npm-completion
+

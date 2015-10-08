@@ -1,7 +1,6 @@
 # Ignore everything ...
 *
 # ... except the following files and folders
-!.aliases
 !.ctags
 !.bash
 !.bash_logout
@@ -12,6 +11,7 @@
 !.nvimrc
 !.screenrc
 !.shell/aliases
+!.shell/completion/npm-completion
 !.shell/profile
 !.vimrc
 !.zsh
