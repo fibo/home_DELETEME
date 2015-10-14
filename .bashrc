@@ -7,6 +7,11 @@ if [ -f /etc/bashrc ]; then
 	source /etc/bashrc
 fi
 
+# Load local profile.
+if [ -f ~/.bashrc.local ]; then
+	source ~/.bashrc.local
+fi
+
 export PS1="\u@\h \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
 # Use vi key bindings
