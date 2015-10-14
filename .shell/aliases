@@ -8,7 +8,7 @@ alias clean_tmp='find /tmp/ -mindepth 1 -maxdepth 1 -user $USER -exec rm -vrf {}
 alias base16-shell_colortest='~/.shell/base16-shell/colortest ~/.shell/base16-shell/base16-${BASE16_SHELL_THEME}.sh'
 
 alias ga='git add .; git number'
-alias gb='git branch'
+alias gb='git branch -a'
 alias gc='git commit'
 alias gcb='git checkout -b'
 alias gd='git diff'
@@ -19,6 +19,7 @@ alias gna='git number add'
 alias gnb='git number blame'
 alias gpl='git pull'
 alias gps='git push'
+alias gr='git remote -v'
 alias gs='git number' # same as git status, plus numbered files
 alias vn='git number -c vim'
 
