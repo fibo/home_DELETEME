@@ -47,3 +47,5 @@ bindkey -v
 source ~/.shell/aliases
 source ~/.shell/profile
 
+source ~/.shell/z/z.sh
+

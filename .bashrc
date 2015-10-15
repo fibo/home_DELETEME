@@ -50,3 +50,5 @@ if [ -f ~/.ssh/agent ]; then
 	. ~/.ssh/agent
 fi
 
+source ~/.shell/z/z.sh
+
