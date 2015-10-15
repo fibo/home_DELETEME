@@ -38,8 +38,6 @@ alias sx='screen -x'
 #     u user
 alias u='ssh localhost -l'
 
-alias z=zsh
-
 # Load local aliases, can override current aliases.
 
 if [ -e ~/.shell/aliases.local ]; then
