@@ -1,7 +1,5 @@
 
-if [ -e ~/.shell/aliases.local ]; then
-	source ~/.shell/aliases.local
-fi
+alias ll='ls -lrth'
 
 alias clean_tmp='find /tmp/ -mindepth 1 -maxdepth 1 -user $USER -exec rm -vrf {} \;'
 
@@ -41,4 +39,10 @@ alias sx='screen -x'
 alias u='ssh localhost -l'
 
 alias z=zsh
+
+# Load local aliases, can override current aliases.
+
+if [ -e ~/.shell/aliases.local ]; then
+	source ~/.shell/aliases.local
+fi
 
