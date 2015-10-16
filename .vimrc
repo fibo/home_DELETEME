@@ -2,7 +2,7 @@
 " Autosource config on exit
 autocmd BufLeave $MYVIMRC :source $MYVIMRC
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""
 " start Vundle config "
 """""""""""""""""""""""
 set nocompatible      " be iMproved
@@ -17,12 +17,11 @@ call vundle#begin()
 " required!
 Plugin 'gmarik/Vundle.vim'
 
-"""""""""""""""""""""
 " my plugin list here
 
 Plugin 'godlygeek/tabular'
-Plugin 'walm/jshint.vim'
 
+Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
@@ -57,11 +56,16 @@ Plugin 'jiangmiao/auto-pairs'
 
 " Languages
 """""""""""
+
+" JavaScript and related
 Plugin 'AndrewRadev/vim-eco'
+Plugin 'walm/jshint.vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'nikvdp/ejs-syntax'
+
+" Misc
 Plugin 'fatih/vim-go'
 Plugin 'gabrielelana/vim-markdown'
-Plugin 'nikvdp/ejs-syntax'
 
 " Typescript
 " Plugin 'Quramy/tsuquyomi'
@@ -103,19 +107,17 @@ if has("gui_running")
   set lines=40 columns=177
 endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use UTF-8 encoding
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""
 
 set encoding=utf8
 set termencoding=utf-8
 set fileencodings=        " no encoding conversion
-set guifontwide=MingLiU:h10
+" this was ok on Windows: set guifontwide=MingLiU:h10
 set guifont=Consolas:h11:cANSI
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable list
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""
 
 set number
 set list
@@ -126,16 +128,14 @@ set listchars=tab:\|\ ,trail:☠,extends:>,precedes:<,nbsp:+
 " it is ok to wrap lines, just use gj or gk to move
 set wrap
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " More natural split opening
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""
 
 set splitbelow
 set splitright
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Better search
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""
 
 set smarttab   " insert tabs on the start of a line according to
                "   shiftwidth, not tabstop
@@ -145,58 +145,45 @@ set smartcase  " ignore case if search pattern is all lowercase,
                "   case-sensitive otherwise
 set ignorecase " ignore case when searching
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enhanced cursor
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""
 
 set cursorcolumn
 set cursorline
-"if version >= 703
 if exists('+colorcolumn')
   set colorcolumn=80
 endif
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Easier split navigations
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " History
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""
 
 set history=1000    " remember more commands and search history
 set undolevels=1000 " use many much levels of undo
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tagbar
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins configuration
+"""""""""""""""""""""""
 
+" Plugin 'majutsushi/tagbar'
 let g:tagbar_autoclose = 1
 let g:tagbar_iconchars = ['▸', '▾']
 let g:tagbar_autopreview = 1
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Plugin 'myusuf3/numbers.vim'
-""""""""""""""""""""""""""""""
-
 let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree']
 
 " Plugin 'bling/vim-airline'
-""""""""""""""""""""""""""""
-
 let g:airline#extensions#tabline#enabled = 1
 
 " Plugin 'scrooloose/syntastic'
-"""""""""""""""""""""""""""""""
-
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -208,9 +195,8 @@ let g:syntastic_check_on_open = 1
 " Block ZZ if there are syntax errors.
 nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""
 
 " Insert current date in yyyy-mm-dd format with \d while in insert mode,
 " useful for comments and Changelogs.
@@ -218,10 +204,9 @@ nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
 " http://blogs.perl.org/users/neilb/2013/09/a-convention-for-changes-files.html#comment-1154925
 :inoremap <leader>d <C-R>=strftime("%Y-%m-%d")<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Miscellanea
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
+"""""""""""""
+
 " disable beeping and flashing
 " see http://vim.wikia.com/wiki/Disable_beeping
 set noerrorbells visualbell t_vb=
@@ -249,9 +234,8 @@ set copyindent    " copy the previous indentation on autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " JavaScript
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""
 
 autocmd Filetype javascript setlocal autoindent
 autocmd Filetype javascript setlocal shiftwidth=2
@@ -259,15 +243,13 @@ autocmd Filetype javascript setlocal softtabstop=2
 autocmd Filetype javascript setlocal expandtab
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CoffeeScript
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""
 autocmd BufRead,BufNewFile *.coffee set filetype=coffee
 autocmd BufRead,BufNewFile *.coffee.md set filetype=coffee
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Perl
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""
 
 autocmd Filetype perl map <F2> :%!perltidy<CR>                    " indent whole file
 autocmd Filetype perl map <F3> :!prove -l<CR>                     " run tests
@@ -314,11 +296,9 @@ let g:syntastic_perl_lib_path = [ './lib' ]
 " au BufRead,BufNewFile *.pl let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'script'"
 " au BufRead,BufNewFile *.pm let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'module'"
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Golang
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType go autocmd BufWritePre <buffer> GoFmt
 
 " gocode: An autocompletion daemon for the Go programming language
