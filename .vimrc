@@ -62,6 +62,7 @@ Plugin 'AndrewRadev/vim-eco'
 Plugin 'walm/jshint.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'nikvdp/ejs-syntax'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " Misc
 Plugin 'fatih/vim-go'
