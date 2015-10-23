@@ -29,7 +29,7 @@ Plugin 'mhinz/vim-startify'
 
 Plugin 'mileszs/ack.vim'
 
-" Needs ctags. Launch .software_install ctags
+" Needs ctags.
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-scripts/Autotag'
 
@@ -40,6 +40,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 Plugin 'myusuf3/numbers.vim'
+
+Plugin 'airblade/vim-gitgutter'
 
 Plugin 'scrooloose/syntastic'
 Plugin 'myint/syntastic-extras'
@@ -54,6 +56,10 @@ Plugin 'mattn/gist-vim'
 
 Plugin 'jiangmiao/auto-pairs'
 
+Plugin 'junegunn/vim-emoji'
+
+Plugin 'ervandew/supertab'
+
 " Languages
 """""""""""
 
@@ -62,7 +68,7 @@ Plugin 'AndrewRadev/vim-eco'
 Plugin 'walm/jshint.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'nikvdp/ejs-syntax'
-Plugin 'mustache/vim-mustache-handlebars'
+" Plugin 'mustache/vim-mustache-handlebars'
 
 " Misc
 Plugin 'fatih/vim-go'
@@ -74,6 +80,7 @@ Plugin 'gabrielelana/vim-markdown'
 
 " Color schemes
 """""""""""""""
+
 Plugin 'chriskempson/base16-vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'baskerville/bubblegum'
@@ -85,8 +92,6 @@ Plugin 'trapd00r/neverland-vim-theme'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-colorscheme-switcher'
 " try Plugin 'Taverius/vim-colorscheme-manager'
-
-Plugin 'ervandew/supertab'
 
 call vundle#end()
 
@@ -172,11 +177,23 @@ set undolevels=1000 " use many much levels of undo
 " Plugins configuration
 """""""""""""""""""""""
 
+" Plugin 'junegunn/vim-emoji'
+
+autocmd VimEnter * if @% == 'COMMIT_EDITMSG' | set completefunc=emoji#complete | endif
+
+" Plugin 'airblade/vim-gitgutter'
+
+silent! if emoji#available()
+  let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+  let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+  let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+  let g:gitgutter_sign_modified_removed = emoji#for('collision')
+endif
+
 " Plugin 'majutsushi/tagbar'
 let g:tagbar_autoclose = 1
 let g:tagbar_iconchars = ['▸', '▾']
 let g:tagbar_autopreview = 1
-
 
 " Plugin 'myusuf3/numbers.vim'
 let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree']
