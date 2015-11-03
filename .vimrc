@@ -2,9 +2,9 @@
 " Autosource config on exit
 autocmd BufLeave $MYVIMRC :source $MYVIMRC
 
-"""""""""""""""""""""""
-" start Vundle config "
-"""""""""""""""""""""""
+" Start Vundle config
+"""""""""""""""""""""
+
 set nocompatible      " be iMproved
 filetype off          " required!
 """""""""""""""""""""""
@@ -101,13 +101,11 @@ call vundle#end()
 syntax enable
 filetype plugin indent on " required!
 
-"""""""""""""""""""""
-" end Vundle config "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" end Vundle config
+"""""""""""""""""""
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set gvim window size
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""
 
 " See http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
 if has("gui_running")
@@ -228,6 +226,11 @@ nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
 " Miscellanea
 """""""""""""
 
+" Load local configuration, i.e. project-specific configurations.
+if filereadable('.local.vimrc')
+  so .local.vimrc
+endif
+
 " disable beeping and flashing
 " see http://vim.wikia.com/wiki/Disable_beeping
 set noerrorbells visualbell t_vb=
@@ -237,9 +240,9 @@ autocmd GUIEnter * set visualbell t_vb=
 set t_Co=256
 " My favourite colorscheme
 try
-	colorscheme bubblegum-256-dark
+  colorscheme bubblegum-256-dark
 catch
-	colorscheme desert
+  colorscheme desert
 endtry
 
 set wildmenu        " enhanced command-line completion
