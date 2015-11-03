@@ -69,6 +69,7 @@ Plugin 'walm/jshint.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'nikvdp/ejs-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'elzr/vim-json'
 
 " HTML
 Plugin 'edsono/vim-matchit'
