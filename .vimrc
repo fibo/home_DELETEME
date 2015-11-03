@@ -68,7 +68,10 @@ Plugin 'AndrewRadev/vim-eco'
 Plugin 'walm/jshint.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'nikvdp/ejs-syntax'
-" Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'mustache/vim-mustache-handlebars'
+
+" HTML
+Plugin 'edsono/vim-matchit'
 
 " Misc
 Plugin 'fatih/vim-go'
@@ -252,6 +255,22 @@ set copyindent    " copy the previous indentation on autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 
+" HTML
+""""""
+
+autocmd Filetype html setlocal autoindent
+autocmd Filetype html setlocal shiftwidth=2
+autocmd Filetype html setlocal softtabstop=2
+autocmd Filetype html setlocal expandtab
+
+" Handlebars
+""""""""""""
+
+autocmd Filetype html.handlebars setlocal autoindent
+autocmd Filetype html.handlebars setlocal shiftwidth=2
+autocmd Filetype html.handlebars setlocal softtabstop=2
+autocmd Filetype html.handlebars setlocal expandtab
+
 " JavaScript
 """"""""""""
 
@@ -260,9 +279,9 @@ autocmd Filetype javascript setlocal shiftwidth=2
 autocmd Filetype javascript setlocal softtabstop=2
 autocmd Filetype javascript setlocal expandtab
 
-
 " CoffeeScript
 """"""""""""""
+
 autocmd BufRead,BufNewFile *.coffee set filetype=coffee
 autocmd BufRead,BufNewFile *.coffee.md set filetype=coffee
 
