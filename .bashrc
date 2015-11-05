@@ -14,9 +14,6 @@ fi
 
 export PS1="\u@\h \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
-# Use vi key bindings
-set -o vi
-
 if [ -f ~/.software/etc/profile ]; then
 	source ~/.software/etc/profile
 fi
