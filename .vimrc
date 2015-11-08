@@ -70,6 +70,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'nikvdp/ejs-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'elzr/vim-json'
+Plugin 'digitaltoad/vim-jade'
 
 " HTML
 Plugin 'edsono/vim-matchit'
