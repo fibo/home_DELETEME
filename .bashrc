@@ -1,6 +1,5 @@
 
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
-source $GITAWAREPROMPT/main.sh
+source ~/.shell/profile
 
 # Play well with others, source global definitions.
 if [ -f /etc/bashrc ]; then
@@ -11,6 +10,9 @@ fi
 if [ -f ~/.bashrc.local ]; then
 	source ~/.bashrc.local
 fi
+
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source $GITAWAREPROMPT/main.sh
 
 export PS1="\u@\h \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
@@ -27,8 +29,6 @@ BASE16_SHELL_FAVOURITE_THEMES=("mocha.dark" "eighties.dark" "ocean.dark")
 # TODO add more to the list, or figure out how to add all.
 # base16_colortest alias works, write base16_next_theme
 BASE16_SHELL_THEME=${BASE16_SHELL_FAVOURITE_THEMES[$RANDOM % ${#BASE16_SHELL_FAVOURITE_THEMES[@]} ]}
-
-source ~/.shell/profile
 
 # How to use an ssh-agent:
 #
