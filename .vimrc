@@ -27,6 +27,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'mhinz/vim-startify'
 
+Plugin 'editorconfig/editorconfig-vim'
+
 Plugin 'mileszs/ack.vim'
 
 " Needs ctags.
