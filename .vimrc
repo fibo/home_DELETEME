@@ -67,7 +67,7 @@ Plugin 'ervandew/supertab'
 
 " JavaScript and related
 Plugin 'AndrewRadev/vim-eco'
-Plugin 'walm/jshint.vim'
+" Plugin 'walm/jshint.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'nikvdp/ejs-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
@@ -214,6 +214,12 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
+
+if filereadable('.jshintrc')
+  let b:syntastic_checkers = ['jshint']
+else
+  let b:syntastic_checkers = ['standard']
+endif
 
 " Block ZZ if there are syntax errors.
 nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
