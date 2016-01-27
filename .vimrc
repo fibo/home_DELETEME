@@ -223,6 +223,7 @@ elseif filereadable('.jshintrc')
   let b:syntastic_checkers = ['jshint']
 else
   let b:syntastic_checkers = ['standard']
+  let g:syntastic_javascript_standard_args = "--global $ --global it --global describe"
 endif
 
 " Block ZZ if there are syntax errors.
