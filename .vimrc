@@ -21,6 +21,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'godlygeek/tabular'
 
+Plugin 'simnalamburt/vim-mundo'
+
 Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'tpope/vim-fugitive'
