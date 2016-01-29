@@ -22,3 +22,6 @@
 [submodule ".shell/z"]
 	path = .shell/z
 	url = https://github.com/rupa/z.git
+[submodule ".bash/kiss-literate-programming"]
+	path = .bash/kiss-literate-programming
+	url = https://github.com/fibo/kiss-literate-programming

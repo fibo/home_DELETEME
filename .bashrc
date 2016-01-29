@@ -33,6 +33,8 @@ fi
 
 source ~/.bash/gh-clone/fun.sh
 
+source ~/.bash/kiss-literate-programming/klp.sh
+
 export PATH=~/.bash/git-number:$PATH
 
 # Base16 Shell, pick a random theme
