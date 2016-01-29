@@ -7,6 +7,9 @@ autocmd BufLeave $MYVIMRC :source $MYVIMRC
 
 set nocompatible      " be iMproved
 filetype off          " required!
+
+" avoid issues on some plugins if we use some shell other than bash
+set shell=/bin/sh
 """""""""""""""""""""""
 
 set rtp+=~/.vim/bundle/Vundle.vim
