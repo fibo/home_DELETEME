@@ -28,7 +28,6 @@ alias ll='ls -lrtha'
 alias vi='vim'
 
 alias sls='screen -ls'
-alias s='screen'
 alias ss='screen -S'
 alias sx='screen -x'
 
