@@ -8,6 +8,7 @@
 !.completion
 !.ctags
 !.editorconfig
+!.eslintrc.json
 !.gitignore
 !.nvimrc
 !.screenrc
