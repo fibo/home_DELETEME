@@ -25,3 +25,6 @@
 [submodule ".bash/kiss-literate-programming"]
 	path = .bash/kiss-literate-programming
 	url = https://github.com/fibo/kiss-literate-programming
+[submodule ".bash/bash-sensible"]
+	path = .bash/bash-sensible
+	url = https://github.com/mrzool/bash-sensible.git

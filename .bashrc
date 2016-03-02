@@ -62,3 +62,6 @@ fi
 
 source ~/.shell/z/z.sh
 
+source ~/.bash/bash-sensible/sensible.bash
+
+
