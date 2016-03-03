@@ -11,14 +11,7 @@ if [ -f ~/.bashrc.local ]; then
 	source ~/.bashrc.local
 fi
 
-# Eternal history
-# See http://stackoverflow.com/questions/9457233/unlimited-bash-history
-export HISTFILESIZE=
-export HISTSIZE=
-export HISTTIMEFORMAT="[%F %T] "
-export HISTCONTROL=erasedups
-export HISTFILE=~/.bash_eternal_history
-PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+source ~/.bash/bash-sensible/sensible.bash
 
 # Prompt displays git branch.
 
@@ -62,7 +55,5 @@ if [ -f ~/.ssh/agent ]; then
 fi
 
 source ~/.shell/z/z.sh
-
-source ~/.bash/bash-sensible/sensible.bash
 
 
