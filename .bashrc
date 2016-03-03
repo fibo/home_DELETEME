@@ -31,6 +31,7 @@ if [ -f ~/.software/etc/profile ]; then
 	source ~/.software/etc/profile
 fi
 
+source ~/.bash/bb-clone/fun.sh
 source ~/.bash/gh-clone/fun.sh
 
 source ~/.bash/kiss-literate-programming/klp.sh

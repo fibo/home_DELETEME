@@ -28,3 +28,6 @@
 [submodule ".bash/bash-sensible"]
 	path = .bash/bash-sensible
 	url = https://github.com/mrzool/bash-sensible.git
+[submodule ".bash/bb-clone"]
+	path = .bash/bb-clone
+	url = https://github.com/fibo/bb-clone.git
