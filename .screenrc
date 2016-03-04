@@ -1,0 +1,4 @@
+vbell off           # Turns visual bell off
+shell -$SHELL       # Load shell profile
+defscrollback 32000 # Set a large scrollback buffer
+defutf8 on          # Always start `screen` with UTF-8 enabled (`screen -U`)
