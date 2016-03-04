@@ -1,0 +1,20 @@
+# Ignore everything ...
+*
+# ... except the following files and folders
+!.ctags
+!.bash
+!.bash_logout
+!.bashrc
+!.completion
+!.ctags
+!.editorconfig
+!.eslintrc.json
+!.gitignore
+!.nvimrc
+!.screenrc
+!.shell/aliases
+!.shell/completion/npm-completion
+!.shell/profile
+!.vimrc
+!.zsh
+!.zshrc
