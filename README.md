@@ -1,4 +1,15 @@
+# init home
+
+[![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
+
+This is the script used to [init home](https://github.com/fibo/home/blob/master/README.md#installation).
+
     #!/bin/bash
+    #
+    # For more information see https://github.com/fibo/home/blob/master/README.md#installation
+    
+Start from home dir
+
     cd
 
 ## Backup files and folders.
@@ -52,6 +63,8 @@ git user.email
         read -t 60 -p "[git config] Enter your user.email: " GIT_EMAIL
         git config --global user.email $GIT_EMAIL
     fi
+
+## Finally
 
 Load changes into current session.
 
