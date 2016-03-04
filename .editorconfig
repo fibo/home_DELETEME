@@ -1,0 +1,21 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+[*{.jade,.js,.json,.pl,.pm,.yaml,yml}]
+charset = utf-8
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+[*.py]
+charset = utf-8
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+[Makefile]
+indent_style = tab
+trim_trailing_whitespace = true
+
