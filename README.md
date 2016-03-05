@@ -2,6 +2,16 @@
 
 > All my *nix home versioned, not only dotfiles
 
+**Table of Contents**
+
+  * [Requirements](#requirements)
+  * [Installation](#installation)
+  * [Branches](#branches)
+  * [How to](#how-to)
+    - [Add files and folders](#add-files-and-folders)
+    - [Add submodule](#add-submodule)
+    - [Update](#update)
+
 ## Requirements
 
 Requires *bash*, *curl*, *git* and *vim*. Depending on your OS, launch with root privilegies
@@ -34,11 +44,7 @@ git remote rm my
 git remote add my git@github.com:fibo/home.git
 ```
 
-The repo remote set in the [init.sh][1] is a generic one, which can be used by anybody, but it doesn't let you to do `git push my home` to update remote with modifications. I just launch
-
-```
-git pull my home
-```
+The repo remote set in the [init.sh][1] is a generic one, which can be used by anybody, but it doesn't let you to do `git push my home` to update remote with modifications.
 
 ## Branches
 
@@ -59,6 +65,12 @@ echo '!.vimrc' >> .gitignore
 git add .
 git commit -m 'added .vimrc'
 git push my home
+```
+
+### Add submodule
+
+```
+git submodule add -f https://github.com/foo/bar.git ~/path/to/foo/bar
 ```
 
 ### Update
