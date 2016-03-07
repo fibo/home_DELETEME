@@ -26,7 +26,6 @@ git remote add my https://github.com/fibo/home.git
 git pull my home
 git submodule update --init
 vim +PluginInstall +qall
-vim +VimProcInstall
 GIT_USER=$(git config --global user.name)
 if [ -z "$GIT_USER" ]
 then
