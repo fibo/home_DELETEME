@@ -58,7 +58,6 @@ Here we go, create repo and init submodules
 Install vim plugins, I ❤ this part
 
     vim +PluginInstall +qall
-    vim +VimProcInstall
 
 ## Basic git configuration prompt
 
