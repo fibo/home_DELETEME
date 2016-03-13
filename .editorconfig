@@ -3,7 +3,7 @@
 # top-most EditorConfig file
 root = true
 
-[*{.jade,.js,.json,.pl,.pm,.yaml,yml}]
+[*{.jade,.js,.json,.pl,.pm,.tag,.yaml,.yml}]
 charset = utf-8
 indent_style = space
 indent_size = 2
