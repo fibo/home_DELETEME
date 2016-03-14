@@ -3,7 +3,7 @@
 # top-most EditorConfig file
 root = true
 
-[*{.jade,.js,.json,.pl,.pm,.tag,.yaml,.yml}]
+[*{.jade,.js,.json,.html,.pl,.pm,.tag,.yaml,.yml}]
 charset = utf-8
 indent_style = space
 indent_size = 2
@@ -13,6 +13,11 @@ trim_trailing_whitespace = true
 charset = utf-8
 indent_style = space
 indent_size = 4
+trim_trailing_whitespace = true
+
+[*{.go,.sh}]
+charset = utf-8
+indent_style = tab
 trim_trailing_whitespace = true
 
 [Makefile]
