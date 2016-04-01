@@ -47,13 +47,17 @@ Backup *.gitmodules*, and modules listed in it
 
 ## Init home
 
-Here we go, create repo and init submodules
+Here we go, create repo
 
     git init
     git checkout -b home
     git remote add my https://github.com/fibo/home.git
     git pull my home
+
+Init submodules, ignore file mode changes
+
     git submodule update --init
+    git submodule foreach git config core.fileMode false
 
 Install vim plugins, I ❤ this part
 
