@@ -2,18 +2,17 @@
 *
 # ... except the following files and folders
 !.ctags
+!.config/nvim/autoload/plug.vim
+!.config/nvim/init.vim
 !.bash
 !.bash_logout
 !.bashrc
-!.completion
 !.ctags
 !.editorconfig
 !.eslintrc.json
 !.gitignore
-!.nvimrc
 !.screenrc
 !.shell/aliases
-!.shell/completion/npm-completion
 !.shell/profile
 !.vimrc
 !.zsh

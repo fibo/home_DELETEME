@@ -82,8 +82,14 @@ Plugin 'digitaltoad/vim-jade'
 " HTML
 Plugin 'edsono/vim-matchit'
 
-" Misc
+" Golang
+" install golang, for instance, launch
+"     .software_install Golang
+" then install tools (gocode, goimport, godef, oracle, golint, etc.)
+"     vim +GoInstallBinaries
 Plugin 'fatih/vim-go'
+
+" Misc
 Plugin 'gabrielelana/vim-markdown'
 
 " Typescript
@@ -153,8 +159,6 @@ set splitright
 " Better search
 """""""""""""""
 
-set smarttab   " insert tabs on the start of a line according to
-               "   shiftwidth, not tabstop
 set hlsearch   " highlight search terms
 set incsearch  " show search matches as you type
 set smartcase  " ignore case if search pattern is all lowercase,
@@ -253,6 +257,14 @@ nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
 " Credits to Tom Wyant
 " http://blogs.perl.org/users/neilb/2013/09/a-convention-for-changes-files.html#comment-1154925
 :inoremap <leader>d <C-R>=strftime("%Y-%m-%d")<CR>
+
+" Tabs
+""""""
+
+set smarttab   " insert tabs on the start of a line according to
+               "   shiftwidth, not tabstop
+" Set tab width to 4, I think it improves readability.
+set tabstop=4
 
 " Miscellanea
 """""""""""""
@@ -368,15 +380,8 @@ let g:syntastic_perl_lib_path = [ './lib' ]
 " au BufRead,BufNewFile *.pm let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'module'"
 
 " Golang
-""""""""
+"""""""""
 
-autocmd FileType go autocmd BufWritePre <buffer> GoFmt
-
-" gocode: An autocompletion daemon for the Go programming language
-" See https://github.com/nsf/gocode and
-" https://github.com/Blackrush/vim-gocode
-"
-" Use <C-x><C-o> for autocompletion (omnifunc autocompletion)
-"
-" Bundle 'Blackrush/vim-gocode'
-
+" Syntastic
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go']  }
