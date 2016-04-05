@@ -4,6 +4,9 @@
 !.ctags
 !.config/nvim/autoload/plug.vim
 !.config/nvim/init.vim
+!.config/nvim/config/init.vim
+!.config/nvim/config/general.vim
+!.config/nvim/config/plugins.vim
 !.bash
 !.bash_logout
 !.bashrc
