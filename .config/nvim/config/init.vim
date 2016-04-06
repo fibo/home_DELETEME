@@ -13,6 +13,8 @@ Plug 'scrooloose/syntastic'
 
 "Plug 'benekastah/neomake'
 
+Plug 'editorconfig/editorconfig-vim'
+
 " Color schemes
 Plug 'jnurmine/Zenburn'
 Plug 'chriskempson/base16-vim'
