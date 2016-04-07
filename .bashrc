@@ -31,9 +31,9 @@ source ~/.bash/kiss-literate-programming/klp.sh
 
 export PATH=~/.bash/git-number:$PATH
 
-VIM_COLORSCHEMES=(cat .config/nvim/config/colorschemes)
+VIM_COLORSCHEMES=("zenburn" "bubblegum-256-dark")
 VIM_COLORSCHEME=${VIM_COLORSCHEMES[$RANDOM % ${#VIM_COLORSCHEMES[@]} ]}
-echo "colorscheme $VIM_COLORSCHEME" >| ~/.config/nvim/config/colorsheme.vim
+echo "colorscheme $VIM_COLORSCHEME" >| ~/.config/nvim/config/colorscheme.vim
 
 # Base16 Shell, pick a random theme
 BASE16_SHELL_FAVOURITE_THEMES=("mocha.dark" "eighties.dark" "ocean.dark")
