@@ -60,4 +60,5 @@ fi
 
 source ~/.shell/z/z.sh
 
+source ~/.bash/completion/npm
 
