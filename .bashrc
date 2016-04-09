@@ -31,7 +31,7 @@ source ~/.bash/kiss-literate-programming/klp.sh
 
 export PATH=~/.bash/git-number:$PATH
 
-VIM_COLORSCHEMES=("zenburn" "bubblegum-256-dark")
+VIM_COLORSCHEMES=("zenburn" "bubblegum-256-dark" "Revolution")
 VIM_COLORSCHEME=${VIM_COLORSCHEMES[$RANDOM % ${#VIM_COLORSCHEMES[@]} ]}
 echo "colorscheme $VIM_COLORSCHEME" >| ~/.config/nvim/config/colorscheme.vim
 

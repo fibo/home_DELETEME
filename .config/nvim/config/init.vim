@@ -3,7 +3,13 @@
 
 call plug#begin('~/.nvim/plugged')
 
-Plug 'fatih/vim-go'
+"Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'ntpeters/vim-better-whitespace'
+
+Plug 'kien/ctrlp.vim'
 
 " Needs Python3 support, after install run :UpdateRemotePlugins
 "Plug 'Shougo/deoplete.nvim'
@@ -14,6 +20,15 @@ Plug 'scrooloose/syntastic'
 "Plug 'benekastah/neomake'
 
 Plug 'editorconfig/editorconfig-vim'
+
+Plug 'jiangmiao/auto-pairs'
+
+" Languages
+Plug 'fatih/vim-go'
+Plug 'elzr/vim-json'
+Plug 'gabrielelana/vim-markdown'
+
+"Plug 'ervandew/supertab'
 
 " Color schemes
 Plug 'jnurmine/Zenburn'
