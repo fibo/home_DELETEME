@@ -1,3 +1,6 @@
+" Map the leader key to SPACE
+let mapleader="\<SPACE>"
+
 set number
 set list
 set listchars=tab:\|\ ,trail:☠,extends:»,precedes:«,nbsp:+
