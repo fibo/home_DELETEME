@@ -1,4 +1,12 @@
 
+" Plug 'kien/ctrlp.vim'
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](node_modules|\.(git|hg|svn))$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+"  \ 'link': 'some_bad_symbolic_links',
+
 " Plug 'vim-airline/vim-airline'
 
 let g:airline#extensions#tabline#enabled = 1
