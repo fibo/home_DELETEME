@@ -3,11 +3,10 @@
 
 call plug#begin('~/.nvim/plugged')
 
-"Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'ntpeters/vim-better-whitespace'
+"Plug 'ntpeters/vim-better-whitespace'
 
 Plug 'kien/ctrlp.vim'
 
@@ -26,15 +25,15 @@ Plug 'jiangmiao/auto-pairs'
 " Languages
 Plug 'fatih/vim-go'
 Plug 'elzr/vim-json'
-Plug 'gabrielelana/vim-markdown'
+"Plug 'gabrielelana/vim-markdown'
 
 "Plug 'ervandew/supertab'
 
 " Color schemes
 Plug 'jnurmine/Zenburn'
-Plug 'chriskempson/base16-vim'
 Plug 'baskerville/bubblegum'
-Plug 'flazz/vim-colorschemes'
+"Plug 'chriskempson/base16-vim'
+"Plug 'flazz/vim-colorschemes'
 Plug 'sickill/vim-monokai'
 Plug 'trapd00r/neverland-vim-theme'
 

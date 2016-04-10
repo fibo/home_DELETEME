@@ -1,1 +1,2 @@
-colorscheme bubblegum-256-dark
+colorscheme zenburn
+let g:airline_theme='zenburn'
