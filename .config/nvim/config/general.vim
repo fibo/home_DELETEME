@@ -1,5 +1,3 @@
-" Map the leader key to SPACE
-let mapleader="\<SPACE>"
 
 set t_Co=256
 
