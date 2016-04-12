@@ -1,4 +1,8 @@
 
+" Plug 'Shougo/deoplete.nvim'
+
+let g:deoplete#enable_at_startup = 1
+
 " Plug 'kien/ctrlp.vim'
 
 let g:ctrlp_custom_ignore = {

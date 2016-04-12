@@ -1,6 +1,7 @@
 # Ignore everything ...
 *
 # ... except the following files and folders
+!.bash/completion/npm
 !.ctags
 !.config/nvim/autoload/plug.vim
 !.config/nvim/init.vim

@@ -31,7 +31,7 @@ source ~/.bash/kiss-literate-programming/klp.sh
 
 export PATH=~/.bash/git-number:$PATH
 
-VIM_COLORSCHEMES=("zenburn")
+VIM_COLORSCHEMES=("jellybeans" "zenburn")
 VIM_COLORSCHEME_FILE=~/.config/nvim/config/colorscheme.vim
 VIM_COLORSCHEME=${VIM_COLORSCHEMES[$RANDOM % ${#VIM_COLORSCHEMES[@]} ]}
 rm $VIM_COLORSCHEME_FILE

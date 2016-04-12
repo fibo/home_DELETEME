@@ -11,8 +11,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 
 " Needs Python3 support, after install run :UpdateRemotePlugins
-"Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim'
 "Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+"
+Plug 'SirVer/ultisnips'
+
+Plug 'ervandew/supertab'
 
 Plug 'scrooloose/syntastic'
 
@@ -36,6 +40,7 @@ Plug 'baskerville/bubblegum'
 "Plug 'flazz/vim-colorschemes'
 Plug 'sickill/vim-monokai'
 Plug 'trapd00r/neverland-vim-theme'
+Plug 'nanotech/jellybeans.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
