@@ -1,4 +1,16 @@
 
+" Open terminal in footer
+nnoremap <leader>t :below 10sp term://$SHELL<cr>i
+
+" <Esc> to exit from terminal mode
+:tnoremap <Esc> <C-\><C-n>
+
+" Toggle numbers
+:nmap <leader>n :setlocal number!<CR>
+
+" Toggle paste mode
+:nmap <leader>p :set paste!<CR>
+
 " Insert current date in yyyy-mm-dd format with \d while in insert mode,
 " useful for comments and Changelogs.
 " Credits to Tom Wyant

@@ -13,7 +13,7 @@ set ruler
 set laststatus=2
 
 " Let plugins show effects after 500ms, not 4s
-set updatetime=500
+"set updatetime=500
 
 " Don't let autocomplete affect usual typing habits
 "set completeopt=menuone,preview,noinsert

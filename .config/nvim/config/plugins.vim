@@ -36,9 +36,9 @@ let g:syntastic_enable_highlighting = 1
 highlight link SyntasticError SpellBad
 highlight link SyntasticWarning SpellCap
 
-"let g:syntastic_error_symbol = "✗"
-"let g:syntastic_warning_symbol = "⚠"
-"let g:syntastic_aggregate_errors = 1
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_aggregate_errors = 1
 
 function LoadSyntasticJavaScriptStandard()
   let b:syntastic_checkers = ['standard']
@@ -53,14 +53,6 @@ elseif filereadable('.eslintrc')
   let b:syntastic_checkers = ['eslint']
 elseif filereadable('.eslintrc.json')
   let b:syntastic_checkers = ['eslint']
-" Assume feross/standard should be installed locally.
-elseif filereadable('node_modules/standard/package.json')
-  call LoadSyntasticJavaScriptStandard()
-elseif filereadable('../node_modules/standard/package.json')
-  call LoadSyntasticJavaScriptStandard()
-elseif filereadable('../../node_modules/standard/package.json')
-  call LoadSyntasticJavaScriptStandard()
-" Fallback to eslint, using ~/.eslintrc.json which extends eslint:recommended
 else
-  let b:syntastic_checkers = ['eslint']
+  call LoadSyntasticJavaScriptStandard()
 endif
