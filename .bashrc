@@ -6,10 +6,9 @@ if [ -f /etc/bashrc ]; then
 	source /etc/bashrc
 fi
 
-# Load local profile.
-if [ -f ~/.bashrc.local ]; then
-	source ~/.bashrc.local
-fi
+# Set locale
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 source ~/.bash/bash-sensible/sensible.bash
 
@@ -64,4 +63,9 @@ fi
 source ~/.shell/z/z.sh
 
 source ~/.bash/completion/npm
+
+# Load local profile.
+if [ -f ~/.bashrc.local ]; then
+	source ~/.bashrc.local
+fi
 
