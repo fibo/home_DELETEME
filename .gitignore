@@ -14,6 +14,7 @@
 !.eslintrc.json
 !.gitignore
 !.screenrc
+!.ssh/agent
 !.shell/aliases
 !.shell/profile
 !.vimrc
