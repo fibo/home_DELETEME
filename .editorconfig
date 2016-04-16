@@ -3,13 +3,13 @@
 # top-most EditorConfig file
 root = true
 
-[*{.jade,.js,.json,.html,.pl,.pm,.tag,.yaml,.yml,rc}]
+[*{.jade,.js,.json,.html,.yaml,.yml,rc}]
 charset = utf-8
 indent_style = space
 indent_size = 2
 trim_trailing_whitespace = true
 
-[*.py]
+[*{.conf,.pl,.pm.py}]
 charset = utf-8
 indent_style = space
 indent_size = 4
