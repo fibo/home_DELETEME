@@ -220,8 +220,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 
 " To enable JavaScript linters, install them (also feross/standard)
@@ -247,7 +247,7 @@ else
 endif
 
 " Block ZZ if there are syntax errors.
-nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
+"nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
 
 " Mappings
 """"""""""

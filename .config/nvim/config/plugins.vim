@@ -60,3 +60,8 @@ elseif filereadable('.eslintrc.json')
 else
   call LoadSyntasticJavaScriptStandard()
 endif
+
+let g:syntastic_enable_perl_checker = 1
+let g:syntastic_perl_checkers = [ 'perl' ]
+let g:syntastic_perl_lib_path = [ './lib' ]
+
