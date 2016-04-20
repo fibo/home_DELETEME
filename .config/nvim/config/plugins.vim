@@ -5,10 +5,13 @@ let g:deoplete#enable_at_startup = 1
 
 " Plug 'kien/ctrlp.vim'
 
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](node_modules|\.(git|hg|svn))$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ }
+" Credits: https://github.com/kien/ctrlp.vim/issues/174#issuecomment-49747252
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+"let g:ctrlp_custom_ignore = {
+""  \ 'dir':  '\v[\/](node_modules|\.(git|hg|svn))$',
+"  \ 'file': '\v\.(exe|so|dll)$',
+"  \ }
 "  \ 'link': 'some_bad_symbolic_links',
 
 " Plug 'vim-airline/vim-airline'
