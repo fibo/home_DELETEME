@@ -22,8 +22,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " my plugin list here
 
-Plugin 'godlygeek/tabular'
-
 Plugin 'simnalamburt/vim-mundo'
 
 Plugin 'kien/ctrlp.vim'
@@ -90,7 +88,11 @@ Plugin 'edsono/vim-matchit'
 Plugin 'fatih/vim-go'
 
 " Misc
-Plugin 'gabrielelana/vim-markdown'
+" Plugin 'gabrielelana/vim-markdown'
+
+" The tabular plugin must come before vim-markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " Typescript
 " Plugin 'Quramy/tsuquyomi'
@@ -330,6 +332,11 @@ autocmd Filetype javascript setlocal expandtab
 
 autocmd BufRead,BufNewFile *.coffee set filetype=coffee
 autocmd BufRead,BufNewFile *.coffee.md set filetype=coffee
+
+" Markdown
+""""""""""
+
+let g:vim_markdown_folding_disabled = 1
 
 " Perl
 """"""
