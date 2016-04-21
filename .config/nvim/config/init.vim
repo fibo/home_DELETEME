@@ -1,5 +1,6 @@
-" vim-plug
-""""""""""
+""""""""""""
+" vim-plug "
+""""""""""""
 
 call plug#begin('~/.nvim/plugged')
 
@@ -27,13 +28,19 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'jiangmiao/auto-pairs'
 
 " Languages
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'fatih/vim-go'
 Plug 'elzr/vim-json'
 "Plug 'gabrielelana/vim-markdown'
 
+" The tabular plugin must come before vim-markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 "Plug 'ervandew/supertab'
 
 " Color schemes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'jnurmine/Zenburn'
 Plug 'baskerville/bubblegum'
 "Plug 'chriskempson/base16-vim'

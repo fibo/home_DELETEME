@@ -1,3 +1,6 @@
+" Plug 'plasticboy/vim-markdown'
+
+let g:vim_markdown_folding_disabled = 1
 
 " Plug 'Shougo/deoplete.nvim'
 
@@ -37,15 +40,15 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 
-let g:syntastic_enable_balloons = 1
+"let g:syntastic_enable_balloons = 1
 
-let g:syntastic_enable_highlighting = 1
-highlight link SyntasticError SpellBad
-highlight link SyntasticWarning SpellCap
+"let g:syntastic_enable_highlighting = 1
+"highlight link SyntasticError SpellBad
+"highlight link SyntasticWarning SpellCap
 
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
-let g:syntastic_aggregate_errors = 1
+"let g:syntastic_error_symbol = "✗"
+"let g:syntastic_warning_symbol = "⚠"
+"let g:syntastic_aggregate_errors = 1
 
 function LoadSyntasticJavaScriptStandard()
   let b:syntastic_checkers = ['standard']
