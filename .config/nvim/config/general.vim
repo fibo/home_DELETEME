@@ -42,7 +42,7 @@ endfunction
 au InsertEnter * call ToggleCurline()
 au InsertLeave * call ToggleCurline()
 
-" Add ".", "-" and "/" to enhance completion
+" Add few chars to enhance completion
 :set iskeyword+=\-
 :set iskeyword+=/
-:set iskeyword+=\.
+":set iskeyword+=\.
