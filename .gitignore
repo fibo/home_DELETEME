@@ -2,6 +2,7 @@
 *
 # ... except the following files and folders
 !.bash/completion/npm
+!.bash_login
 !.ctags
 !.config/nvim/autoload/plug.vim
 !.config/nvim/init.vim
