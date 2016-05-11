@@ -76,6 +76,7 @@ Plugin 'nikvdp/ejs-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'elzr/vim-json'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'digitaltoad/vim-pug'
 
 " HTML
 Plugin 'edsono/vim-matchit'

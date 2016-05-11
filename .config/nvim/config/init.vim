@@ -33,6 +33,8 @@ Plug 'fatih/vim-go'
 Plug 'elzr/vim-json'
 "Plug 'gabrielelana/vim-markdown'
 
+Plug 'digitaltoad/vim-pug'
+
 " The tabular plugin must come before vim-markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
