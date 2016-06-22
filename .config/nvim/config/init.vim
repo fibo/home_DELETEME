@@ -50,7 +50,6 @@ Plug 'baskerville/bubblegum'
 Plug 'sickill/vim-monokai'
 Plug 'trapd00r/neverland-vim-theme'
 Plug 'nanotech/jellybeans.vim'
-Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 " Add plugins to &runtimepath
 call plug#end()
