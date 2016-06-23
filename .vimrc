@@ -272,11 +272,6 @@ set tabstop=4
 " Miscellanea
 """""""""""""
 
-" Load local configuration, i.e. project-specific configurations.
-if filereadable('.local.vimrc')
-  so .local.vimrc
-endif
-
 " disable beeping and flashing
 " see http://vim.wikia.com/wiki/Disable_beeping
 set noerrorbells visualbell t_vb=
@@ -284,6 +279,7 @@ autocmd GUIEnter * set visualbell t_vb=
 
 " Better colors when using vim from an ssh terminal
 set t_Co=256
+
 " My favourite colorscheme
 try
   colorscheme bubblegum-256-dark
