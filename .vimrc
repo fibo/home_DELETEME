@@ -196,16 +196,16 @@ set undolevels=1000 " use many much levels of undo
 
 " Plugin 'junegunn/vim-emoji'
 
-autocmd VimEnter * if @% == 'COMMIT_EDITMSG' | set completefunc=emoji#complete | endif
+"autocmd VimEnter * if @% == 'COMMIT_EDITMSG' | set completefunc=emoji#complete | endif
 
 " Plugin 'airblade/vim-gitgutter'
-
-silent! if emoji#available()
-  let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-  let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
-  let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
-  let g:gitgutter_sign_modified_removed = emoji#for('collision')
-endif
+"
+"silent! if emoji#available()
+"  let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+"  let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+"  let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+"  let g:gitgutter_sign_modified_removed = emoji#for('collision')
+"endif
 
 " Plugin 'majutsushi/tagbar'
 let g:tagbar_autoclose = 1
@@ -217,6 +217,25 @@ let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3
 
 " Plugin 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
+
+" Plugin 'scrooloose/nerdtree'
+
+" NERDTree File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+"call NERDTreeHighlightFile('js', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+"call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+"call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+"call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+"call NERDTreeHighlightFile('html', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('yml', 'Magenta', 'none', '#ff00ff', '#151515')
+
+" Toggle NERDTree with CTRL-n
+map <C-n> :NERDTreeToggle<CR>
 
 " Plugin 'scrooloose/syntastic'
 set statusline+=%#warningmsg#
@@ -250,7 +269,7 @@ else
 endif
 
 " Block ZZ if there are syntax errors.
-"nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
+nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
 
 " Mappings
 """"""""""
