@@ -81,6 +81,9 @@ Plugin 'digitaltoad/vim-pug'
 " HTML
 Plugin 'edsono/vim-matchit'
 
+" GLSL
+Plugin 'beyondmarc/glsl.vim'
+
 " Golang
 " install golang, for instance, launch
 "     .software_install Golang
@@ -88,7 +91,7 @@ Plugin 'edsono/vim-matchit'
 "     vim +GoInstallBinaries
 Plugin 'fatih/vim-go'
 
-" Misc
+" Markdown
 " Plugin 'gabrielelana/vim-markdown'
 
 " The tabular plugin must come before vim-markdown
