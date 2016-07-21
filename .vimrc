@@ -141,8 +141,15 @@ endif
 set encoding=utf8
 set termencoding=utf-8
 set fileencodings=        " no encoding conversion
-" this was ok on Windows: set guifontwide=MingLiU:h10
-set guifont=Consolas:h11:cANSI
+
+" Font
+""""""
+
+" To open a font chooser with the fonts available on your system, launch
+"
+"     :set guifont=*
+
+set guifont=Monaco:h17
 
 " Enable list
 """""""""""""
