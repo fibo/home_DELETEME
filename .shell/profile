@@ -3,3 +3,7 @@ export EDITOR=vim
 
 source ~/.shell/aliases
 
+
+# Source: http://megakemp.com/2016/08/25/git-undo/
+git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}};  }; f'
+
