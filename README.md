@@ -73,7 +73,7 @@ git push my home
 git submodule add -f https://github.com/foo/bar.git ~/path/to/foo/bar
 ```
 
-### Update
+### Update all submodules
 
 Copy and paste the following commands
 
@@ -81,7 +81,8 @@ Copy and paste the following commands
 cd
 git pull my home
 git submodule foreach git pull origin master
-cd -
+git commit -am ':arrow_up: updated submodule'
+git push my home
 # You are done!
 ```
 
