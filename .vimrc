@@ -65,6 +65,8 @@ Plugin 'junegunn/vim-emoji'
 
 Plugin 'ervandew/supertab'
 
+Plugin 'sirver/ultisnips'
+
 " Languages
 """""""""""
 
