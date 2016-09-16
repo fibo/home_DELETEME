@@ -70,6 +70,8 @@ Plugin 'sirver/ultisnips'
 " Languages
 """""""""""
 
+Plugin 'honza/vim-snippets'
+
 " JavaScript and related
 Plugin 'AndrewRadev/vim-eco'
 Plugin 'isRuslan/vim-es6'
