@@ -72,6 +72,7 @@ Plugin 'sirver/ultisnips'
 
 " JavaScript and related
 Plugin 'AndrewRadev/vim-eco'
+Plugin 'isRuslan/vim-es6'
 " Plugin 'walm/jshint.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'nikvdp/ejs-syntax'
