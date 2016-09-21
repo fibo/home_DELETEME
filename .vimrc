@@ -70,7 +70,8 @@ Plugin 'sirver/ultisnips'
 " Languages
 """""""""""
 
-Plugin 'honza/vim-snippets'
+" Use custom snippets, handcrafted with cunning.
+" Plugin 'honza/vim-snippets'
 
 " JavaScript and related
 Plugin 'AndrewRadev/vim-eco'
