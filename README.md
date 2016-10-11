@@ -2,7 +2,7 @@
 
 > All my *nix home versioned, not only dotfiles
 
-**Table of Contents**
+## Table of Contents
 
   * [Requirements](#requirements)
   * [Installation](#installation)
@@ -26,7 +26,7 @@ Requires *bash*, *curl*, *git* and *vim*. Depending on your OS, launch with root
 
 All you need is a one-liner, it takes few seconds
 
-```
+```bash
 curl -L https://g14n.info/home/init.sh | bash
 ```
 
@@ -39,12 +39,12 @@ If you are behind a firewall, try setting `HTTPS_PROXY` variable. If https schem
 * Add **my** own home as a remote
 : After adding an ssh key, following this instructions about how to add [SSH public key based authentication](http://g14n.info/2013/04/getting-started-with-git-shell/#ssh-public-key-based-authentication), I use to add *my* own *remote*. 
 
-```
+```bash
 git remote rm my
 git remote add my git@github.com:fibo/home.git
 ```
 
-The repo remote set in the [init.sh][1] is a generic one, which can be used by anybody, but it doesn't let you to do `git push my home` to update remote with modifications.
+The repo remote set in the [init.sh][init_script] is a generic one, which can be used by anybody, but it doesn't let you to do `git push my home` to update remote with modifications.
 
 ## Branches
 
@@ -60,7 +60,7 @@ The repo remote set in the [init.sh][1] is a generic one, which can be used by a
 
 Everything inside `$HOME` is ignored, so to add a file or a folder, for instance *.vimrc*, you need to modify *.gitignore* once
 
-```
+```bash
 echo '!.vimrc' >> .gitignore
 git add .
 git commit -m 'added .vimrc'
@@ -69,7 +69,7 @@ git push my home
 
 ### Add submodule
 
-```
+```bash
 git submodule add -f https://github.com/foo/bar.git ~/path/to/foo/bar
 ```
 
@@ -77,13 +77,24 @@ git submodule add -f https://github.com/foo/bar.git ~/path/to/foo/bar
 
 Copy and paste the following commands
 
-```
+```bash
 cd
 git pull my home
 git submodule foreach git pull origin master
-git commit -am ':arrow_up: updated submodule'
+git commit -am ':arrow_up: updated submodules'
 git push my home
 # You are done!
 ```
 
-  [1]: https://github.com/fibo/home/blob/gh-pages/init.sh "init.sh"
+### Update to latest version
+
+Copy and paste the following commands
+
+```bash
+cd
+git pull my home
+git submodule foreach git pull origin master
+# You are done!
+```
+
+[init_script]: https://github.com/fibo/home/blob/gh-pages/init.sh "init.sh"
