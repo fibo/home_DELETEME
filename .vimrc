@@ -201,6 +201,11 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Autocompletion
+""""""""""""""""""""""""""
+
+set iskeyword+=-
+
 " History
 """""""""
 
