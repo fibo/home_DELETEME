@@ -22,8 +22,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " my plugin list here
 
-Plugin 'simnalamburt/vim-mundo'
-
 Plugin 'kien/ctrlp.vim'
 Plugin 'Shougo/unite.vim'
 Plugin 'tpope/vim-fugitive'
@@ -35,8 +33,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mileszs/ack.vim'
 
 " Needs ctags.
-Plugin 'majutsushi/tagbar'
-Plugin 'vim-scripts/Autotag'
+" Plugin 'majutsushi/tagbar'
+" Plugin 'vim-scripts/Autotag'
 
 Plugin 'bling/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
@@ -74,18 +72,14 @@ Plugin 'sirver/ultisnips'
 " Plugin 'honza/vim-snippets'
 
 " JavaScript and related
-Plugin 'AndrewRadev/vim-eco'
-Plugin 'isRuslan/vim-es6'
+" Plugin 'AndrewRadev/vim-eco'
+" copy its snippets system and write your own "  Plugin 'isRuslan/vim-es6'
 " Plugin 'walm/jshint.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'nikvdp/ejs-syntax'
-Plugin 'mustache/vim-mustache-handlebars'
+" Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'elzr/vim-json'
-Plugin 'digitaltoad/vim-jade'
 Plugin 'digitaltoad/vim-pug'
-
-" HTML
-Plugin 'edsono/vim-matchit'
 
 " GLSL
 Plugin 'beyondmarc/glsl.vim'
