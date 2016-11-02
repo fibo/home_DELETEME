@@ -81,6 +81,8 @@ Plugin 'nikvdp/ejs-syntax'
 Plugin 'elzr/vim-json'
 Plugin 'digitaltoad/vim-pug'
 
+Plugin 'tpope/vim-haml'
+
 " GLSL
 Plugin 'beyondmarc/glsl.vim'
 
