@@ -31,3 +31,6 @@
 [submodule ".bash/bb-clone"]
 	path = .bash/bb-clone
 	url = https://github.com/fibo/bb-clone.git
+[submodule ".bash/git-hub"]
+	path = .bash/git-hub
+	url = https://github.com/ingydotnet/git-hub.git

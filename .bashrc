@@ -28,6 +28,8 @@ source ~/.bash/gh-clone/fun.sh
 
 source ~/.bash/kiss-literate-programming/klp.sh
 
+source ~/.bash/git-hub/.rc
+
 export PATH=~/.bash/git-number:$PATH
 
 VIM_COLORSCHEMES=("jellybeans" "zenburn")
