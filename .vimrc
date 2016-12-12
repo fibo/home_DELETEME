@@ -80,7 +80,8 @@ Plugin 'nikvdp/ejs-syntax'
 " Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'elzr/vim-json'
 Plugin 'digitaltoad/vim-pug'
-
+Plugin 'pangloss/vim-javascript'
+Plugin 'ryym/vim-riot'
 Plugin 'tpope/vim-haml'
 
 " GLSL
@@ -356,6 +357,9 @@ autocmd Filetype javascript setlocal autoindent
 autocmd Filetype javascript setlocal shiftwidth=2
 autocmd Filetype javascript setlocal softtabstop=2
 autocmd Filetype javascript setlocal expandtab
+
+" vim-javascript
+let g:javascript_plugin_jsdoc = 1
 
 " CoffeeScript
 """"""""""""""
