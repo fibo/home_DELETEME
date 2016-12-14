@@ -80,8 +80,9 @@ Plugin 'nikvdp/ejs-syntax'
 " Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'elzr/vim-json'
 Plugin 'digitaltoad/vim-pug'
-Plugin 'pangloss/vim-javascript'
-Plugin 'ryym/vim-riot'
+" Plugin 'pangloss/vim-javascript'
+Plugin 'nicklasos/vim-jsx-riot'
+" Plugin 'ryym/vim-riot'
 Plugin 'tpope/vim-haml'
 
 " GLSL
@@ -264,25 +265,6 @@ set statusline+=%*
 "let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 
-" To enable JavaScript linters, install them (also feross/standard)
-" in order to be available to syntastic.
-"
-"     npm install jshint eslint standard -g
-"
-" Check for jshint config first ...
-if filereadable('.jshintrc')
-  let b:syntastic_checkers = ['jshint']
-" ... then for eslint.
-elseif filereadable('.eslintrc')
-  let b:syntastic_checkers = ['eslint']
-elseif filereadable('.eslintrc.json')
-  let b:syntastic_checkers = ['eslint']
-" Fallback to standardjs.
-else
-  let b:syntastic_checkers = ['standard']
-  let g:syntastic_javascript_standard_args = "--global $ --global it --global describe"
-endif
-
 " Block ZZ if there are syntax errors.
 nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
 
@@ -358,8 +340,27 @@ autocmd Filetype javascript setlocal shiftwidth=2
 autocmd Filetype javascript setlocal softtabstop=2
 autocmd Filetype javascript setlocal expandtab
 
-" vim-javascript
-let g:javascript_plugin_jsdoc = 1
+au BufNewFile,BufRead *.tag setlocal ft=javascript
+au BufNewFile,BufRead *.tag let g:syntastic_javascript_standard_args = "--global opts"
+
+" To enable JavaScript linters, install them (also feross/standard)
+" in order to be available to syntastic.
+"
+"     npm install jshint eslint standard -g
+"
+" Check for jshint config first ...
+if filereadable('.jshintrc')
+  let b:syntastic_checkers = ['jshint']
+" ... then for eslint.
+elseif filereadable('.eslintrc')
+  let b:syntastic_checkers = ['eslint']
+elseif filereadable('.eslintrc.json')
+  let b:syntastic_checkers = ['eslint']
+" Fallback to standardjs.
+else
+  let b:syntastic_checkers = ['standard']
+  let g:syntastic_javascript_standard_args = "--global $ --global it --global describe"
+endif
 
 " CoffeeScript
 """"""""""""""
