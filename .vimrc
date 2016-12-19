@@ -81,7 +81,7 @@ Plugin 'nikvdp/ejs-syntax'
 Plugin 'elzr/vim-json'
 Plugin 'digitaltoad/vim-pug'
 " Plugin 'pangloss/vim-javascript'
-Plugin 'nicklasos/vim-jsx-riot'
+" Plugin 'nicklasos/vim-jsx-riot'
 " Plugin 'ryym/vim-riot'
 Plugin 'tpope/vim-haml'
 
@@ -340,8 +340,8 @@ autocmd Filetype javascript setlocal shiftwidth=2
 autocmd Filetype javascript setlocal softtabstop=2
 autocmd Filetype javascript setlocal expandtab
 
-au BufNewFile,BufRead *.tag setlocal ft=javascript
-au BufNewFile,BufRead *.tag let g:syntastic_javascript_standard_args = "--global opts"
+au BufNewFile,BufRead *.tag setlocal ft=html
+" au BufNewFile,BufRead *.tag let g:syntastic_javascript_standard_args = "--global opts"
 
 " To enable JavaScript linters, install them (also feross/standard)
 " in order to be available to syntastic.
