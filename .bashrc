@@ -71,3 +71,4 @@ if [ -f ~/.bashrc.local ]; then
 	source ~/.bashrc.local
 fi
 
+source ~/.bash/dir/fun.sh
