@@ -24,7 +24,7 @@ git init
 git checkout -b home
 git remote add my https://github.com/fibo/home.git
 git pull my home
-git submodule update --init
+git submodule update --recursive --remote
 git submodule foreach git config core.fileMode false
 vim +PluginInstall +qall
 GIT_USER=$(git config --global user.name)
