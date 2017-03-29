@@ -3,6 +3,8 @@ alias clean_tmp='find /tmp/ -mindepth 1 -maxdepth 1 -user $USER -exec rm -vrf {}
 
 alias base16-shell_colortest='~/.shell/base16-shell/colortest ~/.shell/base16-shell/base16-${BASE16_SHELL_THEME}.sh'
 
+alias mvim='mvim +:NERDTree'
+
 alias ga='git add .; git number'
 alias gb='git branch -a'
 alias gc='git commit'
