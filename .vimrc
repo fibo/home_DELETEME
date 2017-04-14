@@ -61,9 +61,10 @@ Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'junegunn/vim-emoji'
 
-Plugin 'ervandew/supertab'
-
 Plugin 'sirver/ultisnips'
+" Plugin 'honza/vim-snippets'
+
+Plugin 'ervandew/supertab'
 
 " Languages
 """""""""""
@@ -236,6 +237,20 @@ let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3
 
 " Plugin 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
+
+" Plugin 'SirVer/ultisnips'
+
+" Defines my private snippet directory which is versioned.
+let g:UltiSnipsSnippetsDir="~/.vim/myUltiSnips"
+let g:UltiSnipsSnippetDirectories = ['myUltiSnips']
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " Plugin 'scrooloose/nerdtree'
 

@@ -19,6 +19,7 @@
 !.ssh/agent
 !.shell/aliases
 !.shell/profile
+!.vim/myUltiSnips/
 !.vimrc
 !.zsh
 !.zshrc
