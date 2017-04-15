@@ -1,16 +1,20 @@
-snippet log
+snippet log "console.log"
 console.log($0)
 endsnippet
 
-snippet con
+snippet con "console.log"
 console.log($0)
 endsnippet
 
-snippet fun
+snippet fun "function"
 function ($0) {
 }
 endsnippet
 
-snippet mod
+snippet mod "module.exports"
 module.exports = $0
+endsnippet
+
+snippet require "require"
+var $1 = require('$1')
 endsnippet
