@@ -5,6 +5,8 @@ alias base16-shell_colortest='~/.shell/base16-shell/colortest ~/.shell/base16-sh
 
 alias mvim='mvim +:NERDTree'
 
+alias gt='go test'
+
 alias ga='git add .; git number'
 alias gb='git branch -a'
 alias gc='git commit'
