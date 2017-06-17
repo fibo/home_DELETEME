@@ -73,6 +73,9 @@ Plugin 'ervandew/supertab'
 " Plugin 'honza/vim-snippets'
 
 " JavaScript and related
+Plugin 'kern/vim-es7'
+Plugin 'othree/es.next.syntax.vim'
+
 " Plugin 'AndrewRadev/vim-eco'
 " copy its snippets system and write your own "  Plugin 'isRuslan/vim-es6'
 " Plugin 'walm/jshint.vim'
