@@ -203,11 +203,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Autocompletion
-""""""""""""""""""""""""""
-
-set iskeyword+=-
-
 " History
 """""""""
 
@@ -334,29 +329,19 @@ set copyindent    " copy the previous indentation on autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 
+" CSS
+""""""
+
+autocmd Filetype css setlocal iskeyword+=-
+autocmd Filetype scss setlocal iskeyword+=-
+
 " HTML
 """"""
 
-autocmd Filetype html setlocal autoindent
-autocmd Filetype html setlocal shiftwidth=2
-autocmd Filetype html setlocal softtabstop=2
-autocmd Filetype html setlocal expandtab
-
-" Handlebars
-""""""""""""
-
-autocmd Filetype html.handlebars setlocal autoindent
-autocmd Filetype html.handlebars setlocal shiftwidth=2
-autocmd Filetype html.handlebars setlocal softtabstop=2
-autocmd Filetype html.handlebars setlocal expandtab
+autocmd Filetype html setlocal iskeyword+=-
 
 " JavaScript
 """"""""""""
-
-autocmd Filetype javascript setlocal autoindent
-autocmd Filetype javascript setlocal shiftwidth=2
-autocmd Filetype javascript setlocal softtabstop=2
-autocmd Filetype javascript setlocal expandtab
 
 au BufNewFile,BufRead *.tag setlocal ft=html
 " au BufNewFile,BufRead *.tag let g:syntastic_javascript_standard_args = "--global opts"
