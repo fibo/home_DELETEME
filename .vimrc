@@ -32,6 +32,16 @@ Plugin 'editorconfig/editorconfig-vim'
 
 Plugin 'mileszs/ack.vim'
 
+" See installation instructions
+" https://github.com/Valloric/YouCompleteMe#installation
+"
+" Basically it is something like
+"
+" cd ~/.vim/bundle/YouCompleteMe
+" ./install.py --clang-completer
+"
+" Plugin 'Valloric/YouCompleteMe'
+
 " Needs ctags.
 " Plugin 'majutsushi/tagbar'
 " Plugin 'vim-scripts/Autotag'
@@ -48,11 +58,6 @@ Plugin 'airblade/vim-gitgutter'
 
 Plugin 'scrooloose/syntastic'
 Plugin 'myint/syntastic-extras'
-
-""" Should be deprecated in favor of neovim.
-" Run :VimProcInstall once before running :VimShell
-" Plugin 'Shougo/vimproc.vim'
-" Plugin 'Shougo/vimshell.vim'
 
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
@@ -108,6 +113,7 @@ Plugin 'plasticboy/vim-markdown'
 
 " Typescript
 if version > 8
+  " Requires npm -g install typescript
   Plugin 'Quramy/tsuquyomi'
 endif
 
@@ -173,6 +179,12 @@ set listchars=tab:\|\ ,trail:☠,extends:>,precedes:<,nbsp:+
 
 " it is ok to wrap lines, just use gj or gk to move
 set wrap
+
+" Completion
+""""""""""""
+
+" Dictionary Word Completion Using Ctrl-x Ctrl-k
+set dictionary+=/usr/share/dict/words
 
 " More natural split opening
 """"""""""""""""""""""""""""
@@ -247,6 +259,7 @@ let g:UltiSnipsSnippetDirectories = ['myUltiSnips']
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsExpandTrigger="<C-space>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
@@ -346,6 +359,7 @@ autocmd Filetype html setlocal iskeyword+=-
 " JavaScript
 """"""""""""
 
+" Riot tg files
 au BufNewFile,BufRead *.tag setlocal ft=html
 " au BufNewFile,BufRead *.tag let g:syntastic_javascript_standard_args = "--global opts"
 
@@ -366,6 +380,16 @@ elseif filereadable('.eslintrc.json')
 else
   let b:syntastic_checkers = ['standard']
   let g:syntastic_javascript_standard_args = "--global $ --global it --global describe"
+endif
+
+" TypeScript
+""""""""""""
+
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
+
+if filereadable('tsconfig.json')
+  let b:syntastic_checkers = ['tsuquyomi']
 endif
 
 " CoffeeScript
