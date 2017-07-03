@@ -107,8 +107,11 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 " Typescript
-" Plugin 'Quramy/tsuquyomi'
-" Plugin 'leafgarland/typescript-vim'
+if version > 8
+  Plugin 'Quramy/tsuquyomi'
+endif
+
+Plugin 'leafgarland/typescript-vim'
 
 " Color schemes
 """""""""""""""
