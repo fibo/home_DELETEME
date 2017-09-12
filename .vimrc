@@ -49,6 +49,8 @@ Plugin 'mileszs/ack.vim'
 Plugin 'bling/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
 
+Plugin 'scrooloose/nerdcommenter'
+
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
