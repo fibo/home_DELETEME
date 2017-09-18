@@ -2,10 +2,6 @@
 
 let g:vim_markdown_folding_disabled = 1
 
-" Plug 'Shougo/deoplete.nvim'
-
-let g:deoplete#enable_at_startup = 1
-
 " Plug 'kien/ctrlp.vim'
 
 " Credits: https://github.com/kien/ctrlp.vim/issues/174#issuecomment-49747252
