@@ -37,3 +37,6 @@
 [submodule ".bash/dir"]
 	path = .bash/dir
 	url = https://github.com/fibo/dir.git
+[submodule "/Users/gcasati/.bash/yyyymmdd"]
+	path = /Users/gcasati/.bash/yyyymmdd
+	url = https://github.com/fibo/yyyymmdd.git
