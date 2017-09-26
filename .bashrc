@@ -40,12 +40,6 @@ rm $VIM_COLORSCHEME_FILE
 echo -e "colorscheme $VIM_COLORSCHEME" >> $VIM_COLORSCHEME_FILE
 echo -e "let g:airline_theme='$VIM_COLORSCHEME'" >> $VIM_COLORSCHEME_FILE
 
-# Base16 Shell, pick a random theme
-BASE16_SHELL_FAVOURITE_THEMES=("mocha.dark" "eighties.dark" "ocean.dark")
-# TODO add more to the list, or figure out how to add all.
-# base16_colortest alias works, write base16_next_theme
-BASE16_SHELL_THEME=${BASE16_SHELL_FAVOURITE_THEMES[$RANDOM % ${#BASE16_SHELL_FAVOURITE_THEMES[@]} ]}
-
 # How to use an ssh-agent:
 #
 # 1. Create an ssh key, see

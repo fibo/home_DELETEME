@@ -16,9 +16,6 @@
 [submodule ".zsh/antigen"]
 	path = .zsh/antigen
 	url = https://github.com/zsh-users/antigen.git
-[submodule ".shell/base16-shell"]
-	path = .shell/base16-shell
-	url = https://github.com/chriskempson/base16-shell.git
 [submodule ".shell/z"]
 	path = .shell/z
 	url = https://github.com/rupa/z.git
