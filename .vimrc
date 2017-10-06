@@ -91,9 +91,13 @@ Plugin 'nikvdp/ejs-syntax'
 " Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'elzr/vim-json'
 Plugin 'digitaltoad/vim-pug'
-" Plugin 'pangloss/vim-javascript'
+
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx' " requires pangloss/vim-javascript
+
 " Plugin 'nicklasos/vim-jsx-riot'
 " Plugin 'ryym/vim-riot'
+
 Plugin 'tpope/vim-haml'
 
 " GLSL
