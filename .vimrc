@@ -32,20 +32,6 @@ Plugin 'editorconfig/editorconfig-vim'
 
 Plugin 'mileszs/ack.vim'
 
-" See installation instructions
-" https://github.com/Valloric/YouCompleteMe#installation
-"
-" Basically it is something like
-"
-" cd ~/.vim/bundle/YouCompleteMe
-" ./install.py --clang-completer
-"
-" Plugin 'Valloric/YouCompleteMe'
-
-" Needs ctags.
-" Plugin 'majutsushi/tagbar'
-" Plugin 'vim-scripts/Autotag'
-
 Plugin 'bling/vim-airline'
 Plugin 'ntpeters/vim-better-whitespace'
 
@@ -103,6 +89,9 @@ Plugin 'tpope/vim-haml'
 " GLSL
 Plugin 'beyondmarc/glsl.vim'
 
+" Jekyll
+Plugin 'tpope/vim-liquid'
+
 " Golang
 " install golang, for instance, launch
 "     .software_install Golang
@@ -111,7 +100,6 @@ Plugin 'beyondmarc/glsl.vim'
 Plugin 'fatih/vim-go'
 
 " Markdown
-" Plugin 'gabrielelana/vim-markdown'
 
 " The tabular plugin must come before vim-markdown
 Plugin 'godlygeek/tabular'
@@ -447,6 +435,9 @@ let g:tagbar_type_perl = {
         \ 'd:pod:1:0',
     \ ],
 \ }
+
+" CtrlP
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
 
 " Syntastic
 let g:syntastic_enable_perl_checker = 1
