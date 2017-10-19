@@ -23,7 +23,7 @@ Plugin 'gmarik/Vundle.vim'
 " my plugin list here
 
 Plugin 'kien/ctrlp.vim'
-Plugin 'Shougo/unite.vim'
+" Plugin 'Shougo/unite.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'mhinz/vim-startify'
@@ -57,7 +57,7 @@ Plugin 'junegunn/vim-emoji'
 Plugin 'sirver/ultisnips'
 " Plugin 'honza/vim-snippets'
 
-Plugin 'ervandew/supertab'
+" Plugin 'ervandew/supertab'
 
 " Languages
 """""""""""
@@ -234,6 +234,10 @@ set undolevels=1000 " use many much levels of undo
 "  let g:gitgutter_sign_modified_removed = emoji#for('collision')
 "endif
 
+" Plugin 'kien/ctrlp.vim'
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
+
 " Plugin 'majutsushi/tagbar'
 let g:tagbar_autoclose = 1
 let g:tagbar_iconchars = ['▸', '▾']
@@ -379,12 +383,12 @@ endif
 " TypeScript
 """"""""""""
 
-let g:tsuquyomi_disable_quickfix = 1
-let g:syntastic_typescript_checkers = ['tsuquyomi']
+" let g:tsuquyomi_disable_quickfix = 1
+" let g:syntastic_typescript_checkers = ['tsuquyomi']
 
-if filereadable('tsconfig.json')
-  let b:syntastic_checkers = ['tsuquyomi']
-endif
+" if filereadable('tsconfig.json')
+"   let b:syntastic_checkers = ['tsuquyomi']
+" endif
 
 " CoffeeScript
 """"""""""""""
@@ -435,9 +439,6 @@ let g:tagbar_type_perl = {
         \ 'd:pod:1:0',
     \ ],
 \ }
-
-" CtrlP
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
 
 " Syntastic
 let g:syntastic_enable_perl_checker = 1
