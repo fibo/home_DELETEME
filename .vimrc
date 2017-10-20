@@ -106,12 +106,12 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 " Typescript
-if version > 8
-  " Requires npm -g install typescript
-  Plugin 'Quramy/tsuquyomi'
-endif
+" if version > 8
+"   " Requires npm -g install typescript
+"  Plugin 'Quramy/tsuquyomi'
+" endif
 
-Plugin 'leafgarland/typescript-vim'
+" Plugin 'leafgarland/typescript-vim'
 
 " Color schemes
 """""""""""""""
