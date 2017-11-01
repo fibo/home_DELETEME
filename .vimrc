@@ -44,8 +44,8 @@ Plugin 'myusuf3/numbers.vim'
 
 Plugin 'airblade/vim-gitgutter'
 
-Plugin 'scrooloose/syntastic'
-Plugin 'myint/syntastic-extras'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'myint/syntastic-extras'
 
 Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
@@ -284,16 +284,16 @@ call NERDTreeHighlightFile('yml', 'Magenta', 'none', '#ff00ff', '#151515')
 map <C-n> :NERDTreeToggle<CR>
 
 " Plugin 'scrooloose/syntastic'
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+" "let g:syntastic_always_populate_loc_list = 1
+" "let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
 
 " Block ZZ if there are syntax errors.
-nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
+" nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
 
 " Mappings
 """"""""""
@@ -361,24 +361,24 @@ autocmd Filetype html setlocal iskeyword+=-
 au BufNewFile,BufRead *.tag setlocal ft=html
 " au BufNewFile,BufRead *.tag let g:syntastic_javascript_standard_args = "--global opts"
 
-" To enable JavaScript linters, install them (also feross/standard)
-" in order to be available to syntastic.
-"
-"     npm install jshint eslint standard -g
-"
-" Check for jshint config first ...
-if filereadable('.jshintrc')
-  let b:syntastic_checkers = ['jshint']
-" ... then for eslint.
-elseif filereadable('.eslintrc')
-  let b:syntastic_checkers = ['eslint']
-elseif filereadable('.eslintrc.json')
-  let b:syntastic_checkers = ['eslint']
-" Fallback to standardjs.
-else
-  let b:syntastic_checkers = ['standard']
-  let g:syntastic_javascript_standard_args = "--global $ --global it --global describe"
-endif
+" " To enable JavaScript linters, install them (also feross/standard)
+" " in order to be available to syntastic.
+" "
+" "     npm install jshint eslint standard -g
+" "
+" " Check for jshint config first ...
+" if filereadable('.jshintrc')
+"   let b:syntastic_checkers = ['jshint']
+" " ... then for eslint.
+" elseif filereadable('.eslintrc')
+"   let b:syntastic_checkers = ['eslint']
+" elseif filereadable('.eslintrc.json')
+"   let b:syntastic_checkers = ['eslint']
+" " Fallback to standardjs.
+" else
+"   let b:syntastic_checkers = ['standard']
+"   let g:syntastic_javascript_standard_args = "--global $ --global it --global describe"
+" endif
 
 " TypeScript
 """"""""""""
@@ -440,10 +440,10 @@ let g:tagbar_type_perl = {
     \ ],
 \ }
 
-" Syntastic
-let g:syntastic_enable_perl_checker = 1
-let g:syntastic_perl_checkers = [ 'perl' ]
-let g:syntastic_perl_lib_path = [ './lib' ]
+" " Syntastic
+" let g:syntastic_enable_perl_checker = 1
+" let g:syntastic_perl_checkers = [ 'perl' ]
+" let g:syntastic_perl_lib_path = [ './lib' ]
 
 " au BufRead,BufNewFile *.t let  g:syntastic_perl_perlcritic_args="--severity 4 --theme 'test'"
 " au BufRead,BufNewFile *.pl let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'script'"
@@ -453,5 +453,5 @@ let g:syntastic_perl_lib_path = [ './lib' ]
 """""""""
 
 " Syntastic
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go']  }
+" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go']  }
