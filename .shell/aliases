@@ -23,9 +23,6 @@ alias gr='git remote -v'
 alias gs='git number' # same as git status, plus numbered files
 alias vn='git number -c vim'
 
-alias gh-pages-push='git subtree --prefix gh-pages push origin gh-pages'
-alias gh-pages-pull='git subtree --prefix gh-pages pull origin gh-pages'
-
 alias l='ls -lrth'
 alias ll='ls -lrtha'
 
