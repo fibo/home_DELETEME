@@ -25,7 +25,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 " Plugin 'Shougo/unite.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
+" Plugin 'tpope/vim-surround'
 Plugin 'mhinz/vim-startify'
 
 Plugin 'editorconfig/editorconfig-vim'
@@ -38,11 +38,11 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+" Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 Plugin 'myusuf3/numbers.vim'
 
-Plugin 'airblade/vim-gitgutter'
+" Plugin 'airblade/vim-gitgutter'
 
 " Plugin 'scrooloose/syntastic'
 " Plugin 'myint/syntastic-extras'
@@ -84,7 +84,7 @@ Plugin 'mxw/vim-jsx' " requires pangloss/vim-javascript
 " Plugin 'nicklasos/vim-jsx-riot'
 " Plugin 'ryym/vim-riot'
 
-Plugin 'tpope/vim-haml'
+" Plugin 'tpope/vim-haml'
 
 " GLSL
 Plugin 'beyondmarc/glsl.vim'
@@ -116,16 +116,16 @@ Plugin 'plasticboy/vim-markdown'
 " Color schemes
 """""""""""""""
 
-Plugin 'chriskempson/base16-vim'
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'chriskempson/base16-vim'
+" Plugin 'altercation/vim-colors-solarized'
 Plugin 'baskerville/bubblegum'
-Plugin 'flazz/vim-colorschemes'
+" Plugin 'flazz/vim-colorschemes'
 Plugin 'sickill/vim-monokai'
-Plugin 'trapd00r/neverland-vim-theme'
+" Plugin 'trapd00r/neverland-vim-theme'
 
 " Color scheme goodies. F8 switches the colorscheme.
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-colorscheme-switcher'
+" Plugin 'xolox/vim-misc'
+" Plugin 'xolox/vim-colorscheme-switcher'
 " try Plugin 'Taverius/vim-colorscheme-manager'
 
 call vundle#end()
@@ -264,7 +264,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-" Plugin 'scrooloose/nerdtree'
+" Plugin 'fatih/vim-go'
+let g:go_version_warning = 0
 
 " NERDTree File highlighting
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
