@@ -69,8 +69,11 @@ git push my home
 
 ### Add submodule
 
+Add a new submodule, moving into your home and providing a relative path.
+
 ```bash
-git submodule add -f https://github.com/foo/bar.git ~/path/to/foo/bar
+cd
+git submodule add -f https://github.com/foo/bar.git home/relative/path/to/foo/bar
 ```
 
 ### Update all submodules
