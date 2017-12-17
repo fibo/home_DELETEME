@@ -24,7 +24,7 @@ Requires *bash*, *curl*, *git* and *vim*. Depending on your OS, launch with root
 * On Ubuntu
 : `apt-get install -y bash curl git vim`
 * On OS X
-: Just install [brew](https://brew.sh/), then all missing requirements (i.e. git) are installed
+: Install [brew](https://brew.sh/), launch commands `brew install bash` and `brew install findutils --with-default-names` then go to *Terminal* > *Preferences* > *General* > *Shell opens with* and set *Command* to `/usr/local/bin/bash`.
 
 ## Installation
 
