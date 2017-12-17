@@ -2,6 +2,8 @@
 
 > All my *nix home versioned, not only dotfiles
 
+<img src="https://rawgit.com/fibo/os-icons8/master/Apple-50.png" width="50" height="50" /> <img src="https://rawgit.com/fibo/os-icons8/master/Linux-50.png" width="50" height="50" />
+
 ## Table of Contents
 
   * [Requirements](#requirements)
@@ -11,6 +13,7 @@
     - [Add files and folders](#add-files-and-folders)
     - [Add submodule](#add-submodule)
     - [Update](#update)
+  * [License](#license)
 
 ## Requirements
 
@@ -20,7 +23,8 @@ Requires *bash*, *curl*, *git* and *vim*. Depending on your OS, launch with root
 : `yum install -y bash curl git vim`
 * On Ubuntu
 : `apt-get install -y bash curl git vim`
-* On OS X, requirements are already installed
+* On OS X
+: Just install [brew](https://brew.sh/), then all missing requirements (i.e. git) are installed
 
 ## Installation
 
@@ -99,5 +103,11 @@ git pull my home
 git submodule foreach git pull origin master
 # You are done!
 ```
+
+## License
+
+[MIT](http://g14n.info/mit-license/)
+
+<sub>OS icons provided by <a href="https://icons8.com/">icons8</a>.</sub>
 
 [init_script]: https://github.com/fibo/home/blob/gh-pages/init.sh "init.sh"
