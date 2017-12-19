@@ -31,6 +31,22 @@ source ~/.bash/kiss-literate-programming/klp.sh
 
 source ~/.bash/git-hub/.rc
 
+# On OSX, enable brew completion
+BREW=$(which brew)
+
+if test $BREW
+then
+	BREW_BASH_COMPLETION=$(brew --prefix)/etc/bash_completion
+
+	if [ -f $BREW_BASH_COMPLETION ]
+	then
+		source $BREW_BASH_COMPLETION
+	fi
+
+	unset BREW
+	unset BREW_BASH_COMPLETION
+fi
+
 export PATH=~/.bash/git-number:$PATH
 
 VIM_COLORSCHEMES=("jellybeans" "zenburn")
