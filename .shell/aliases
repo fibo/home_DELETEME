@@ -1,10 +1,6 @@
 
 alias clean_tmp='find /tmp/ -mindepth 1 -maxdepth 1 -user $USER -exec rm -vrf {} \;'
 
-alias base16-shell_colortest='~/.shell/base16-shell/colortest ~/.shell/base16-shell/base16-${BASE16_SHELL_THEME}.sh'
-
-alias mvim='mvim +:NERDTree'
-
 alias gt='go test'
 
 alias ga='git add .; git number'
@@ -38,7 +34,7 @@ alias u='ssh localhost -l'
 
 # Load local aliases, can override current aliases.
 
-if [ -e ~/.shell/aliases.local ]; then
-	source ~/.shell/aliases.local
+if [ -e ~/.shell/local.aliases ]; then
+	source ~/.shell/local.aliases
 fi
 
