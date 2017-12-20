@@ -78,8 +78,8 @@ source ~/.shell/z/z.sh
 source ~/.bash/completion/npm
 
 # Load local profile.
-if [ -f ~/.bashrc.local ]; then
-	source ~/.bashrc.local
+if [ -f ~/.local.bashrc ]; then
+	source ~/.local.bashrc
 fi
 
 source ~/.bash/dir/fun.sh
