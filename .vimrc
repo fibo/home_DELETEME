@@ -333,6 +333,10 @@ autocmd GUIEnter * set visualbell t_vb=
 " Better colors when using vim from an ssh terminal
 set t_Co=256
 
+" Better comment handling when using J
+" See https://kinbiko.com/vim/my-shiniest-vim-gems/
+set formatoptions+=j
+
 " My favourite colorscheme
 try
   colorscheme bubblegum-256-dark
