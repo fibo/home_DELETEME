@@ -22,7 +22,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " my plugin list here
 
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
 " Plugin 'Shougo/unite.vim'
 Plugin 'tpope/vim-fugitive'
 " Plugin 'tpope/vim-surround'
@@ -245,7 +245,7 @@ set undolevels=1000 " use many much levels of undo
 
 " Plugin 'kien/ctrlp.vim'
 
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
 
 " Plugin 'majutsushi/tagbar'
 let g:tagbar_autoclose = 1
