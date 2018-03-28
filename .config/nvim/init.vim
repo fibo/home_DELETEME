@@ -19,7 +19,6 @@
 
 " Following suggestion from article
 " https://gregjs.com/vim/2016/do-yourself-a-favor-and-modularize-your-vimrc-init-vim/
-source $HOME/.config/nvim/config/init.vim
-source $HOME/.config/nvim/config/general.vim
 source $HOME/.config/nvim/config/plugins.vim
+source $HOME/.config/nvim/config/general.vim
 source $HOME/.config/nvim/config/keys.vim

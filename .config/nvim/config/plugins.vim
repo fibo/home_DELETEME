@@ -1,29 +1,37 @@
-" Plug 'plasticboy/vim-markdown'
+""""""""""""
+" vim-plug "
+""""""""""""
 
-let g:vim_markdown_folding_disabled = 1
+call plug#begin('~/.nvim/plugged')
 
-" Plug 'kien/ctrlp.vim'
-
-" Credits: https://github.com/kien/ctrlp.vim/issues/174#issuecomment-49747252
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
-"let g:ctrlp_custom_ignore = {
-""  \ 'dir':  '\v[\/](node_modules|\.(git|hg|svn))$',
-"  \ 'file': '\v\.(exe|so|dll)$',
-"  \ }
-"  \ 'link': 'some_bad_symbolic_links',
-
-" Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 let g:airline#extensions#tabline#enabled = 1
 
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
-" Plug 'fatih/vim-go'
-let g:go_fmt_command = "goimports"
+Plug 'scrooloose/nerdcommenter'
 
-" Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'myusuf3/numbers.vim'
+
+let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree']
+
+Plug 'kien/ctrlp.vim'
+
+" Credits: https://github.com/kien/ctrlp.vim/issues/174#issuecomment-49747252
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+
+"Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+"
+Plug 'ervandew/supertab'
+
+Plug 'scrooloose/syntastic'
 
 " https://github.com/scrooloose/syntastic#3-recommended-settings
 
@@ -66,4 +74,44 @@ endif
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = [ 'perl' ]
 let g:syntastic_perl_lib_path = [ './lib' ]
+
+"Plug 'benekastah/neomake'
+
+Plug 'editorconfig/editorconfig-vim'
+
+Plug 'jiangmiao/auto-pairs'
+
+" Languages
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Plug 'fatih/vim-go'
+
+let g:go_fmt_command = "goimports"
+
+Plug 'elzr/vim-json'
+
+"Plug 'gabrielelana/vim-markdown'
+
+Plug 'digitaltoad/vim-pug'
+
+" The tabular plugin must come before vim-markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+let g:vim_markdown_folding_disabled = 1
+
+" Color schemes
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Plug 'jnurmine/Zenburn'
+Plug 'baskerville/bubblegum'
+"Plug 'chriskempson/base16-vim'
+"Plug 'flazz/vim-colorschemes'
+Plug 'sickill/vim-monokai'
+Plug 'trapd00r/neverland-vim-theme'
+Plug 'nanotech/jellybeans.vim'
+Plug 'lifepillar/vim-solarized8'
+
+" Add plugins to &runtimepath
+call plug#end()
 
