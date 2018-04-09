@@ -4,7 +4,7 @@
 " Enable Python3 support:
 "     sudo apt-get install python3-setuptools
 "     sudo easy_install3 pip
-"     sudo pip3 install neovim
+"     pip3 install --user neovim
 "
 " See also https://neovim.io/doc/user/nvim_python.html
 
@@ -12,10 +12,8 @@
 " curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-" To enable JavaScript linters, install them (also feross/standard)
-" in order to be available to syntastic.
-"
-"     npm install jshint eslint standard -g
+" See ~/.config/nvim/config/plugins.vim for plugins configuration and further
+" installation instructions.
 
 " Following suggestion from article
 " https://gregjs.com/vim/2016/do-yourself-a-favor-and-modularize-your-vimrc-init-vim/
