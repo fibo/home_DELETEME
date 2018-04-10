@@ -1,4 +1,3 @@
-
 source ~/.shell/profile
 
 # Play well with others, source global definitions.
@@ -10,8 +9,15 @@ fi
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-source ~/.bash/bash-sensible/sensible.bash
 source ~/.bash/yyyymmdd/yyyymmdd.sh
+
+# On OSX do
+#     brew install bash
+#     sudo -s
+#     echo /usr/local/bin/bash >> /etc/shells
+#     chsh -s /usr/local/bin/bash
+# See also https://johndjameson.com/blog/updating-your-shell-with-homebrew/
+source ~/.bash/bash-sensible/sensible.bash
 
 # Prompt displays git branch.
 

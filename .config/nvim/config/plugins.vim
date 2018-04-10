@@ -75,6 +75,12 @@ Plug 'digitaltoad/vim-pug'
 Plug 'mattn/emmet-vim'
 " Example: type html:5 then CTRL-y-, then try other expression like div>p
 
+" https://github.com/mattn/emmet-vim/issues/232#issuecomment-276705146
+let g:user_emmet_install_global = 0
+autocmd FileType html,css  EmmetInstall
+" autocmd FileType html,css imap <TAB> <plug>(emmet-expand-abbr)
+autocmd FileType html,css imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+
 " Markdown
 
 " The tabular plugin must come before vim-markdown

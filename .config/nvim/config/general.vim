@@ -1,11 +1,17 @@
 
 "set t_Co=256
 
+set mouse=a
+
 set number
 set list
 set listchars=tab:\|\ ,trail:☠,extends:»,precedes:«,nbsp:+
 
 set showmatch
+
+set autoindent
+
+set autoread
 
 set ruler
 
