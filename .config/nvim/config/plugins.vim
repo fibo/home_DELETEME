@@ -41,19 +41,8 @@ let g:ctrlp_funky_syntax_highlight = 1
 
 nnoremap <Leader>f :CtrlPFunky<Cr>
 
-" See article: Neovim, Deoplete, JSPC, UltiSnips and Tern: A config for kickass autocompletion.
-" https://www.gregjs.com/vim/2016/neovim-deoplete-jspc-ultisnips-and-tern-a-config-for-kickass-autocompletion/
-
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-let g:deoplete#enable_at_startup = 1
-
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-" Defines my private snippet directory which is versioned.
-" let g:UltiSnipsSnippetsDir="~/.nvim/myUltiSnips"
-" let g:UltiSnipsSnippetDirectories = ['myUltiSnips']
+" Install https://github.com/fibo/UltiSnips
 
 Plug 'myusuf3/numbers.vim'
 
@@ -62,8 +51,6 @@ let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3
 Plug 'editorconfig/editorconfig-vim'
 
 Plug 'jiangmiao/auto-pairs'
-
-let g:AutoPairsFlyMode = 1
 
 if has("mac")
   let g:AutoPairsShortcutFastWrap   = 'Ω' " <M-w>
