@@ -33,6 +33,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+Plug 'mileszs/ack.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'tacahiroy/ctrlp-funky'
@@ -111,15 +112,7 @@ Plug 'supercollider/scvim'
 
 Plug 'nanotech/jellybeans.vim'
 Plug 'jnurmine/Zenburn'
-
 Plug 'JarrodCTaylor/spartan'
-
-" Plug 'baskerville/bubblegum'
-" Plug 'chriskempson/base16-vim'
-" Plug 'flazz/vim-colorschemes'
-" Plug 'sickill/vim-monokai'
-" Plug 'trapd00r/neverland-vim-theme'
-" Plug 'lifepillar/vim-solarized8'
 
 " Add plugins to &runtimepath
 call plug#end()
