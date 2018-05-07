@@ -107,6 +107,10 @@ let g:vim_markdown_folding_disabled = 1
 
 Plug 'supercollider/scvim'
 
+" WebAssembly
+
+Plug 'rhysd/vim-wasm'
+
 " Color schemes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
