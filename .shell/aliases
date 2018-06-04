@@ -38,3 +38,4 @@ if [ -e ~/.shell/local.aliases ]; then
 	source ~/.shell/local.aliases
 fi
 
+alias ,,='cd ..; pwd'
