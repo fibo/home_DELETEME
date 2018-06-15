@@ -84,16 +84,43 @@ Plug 'elzr/vim-json'
 
 Plug 'digitaltoad/vim-pug'
 
+" GraphQL
+
+Plug 'jparise/vim-graphql'
+
 " HTML
 
 Plug 'mattn/emmet-vim'
-" Example: type html:5 then CTRL-y-, then try other expression like div>p
+" Example: type html:5 and expand it with\ CTRL-l-, (default is CTRL-y-,)
+" then try other expression like div>p
+
+let g:user_emmet_leader_key='<C-L>'
+
+" Credits for the following configuration snippet:
+"   https://nick-tomlin.com/2017/06/10/jsx-with-emmet-vim/
+"   https://github.com/mattn/emmet-vim/issues/255#issuecomment-215796031
+
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\    'extends': 'jsx',
+\    'quote_char': "'",
+\  },
+\  'javascript' : {
+\    'extends': 'jsx',
+\    'quote_char': "'",
+\  },
+\}
+
 
 " https://github.com/mattn/emmet-vim/issues/232#issuecomment-276705146
-let g:user_emmet_install_global = 0
-autocmd FileType html,css  EmmetInstall
+" let g:user_emmet_install_global = 0
+" autocmd FileType html,css  EmmetInstall
 " autocmd FileType html,css imap <TAB> <plug>(emmet-expand-abbr)
-autocmd FileType html,css imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" autocmd FileType html,css,js imap <expr> <c-space> emmet#expandAbbrIntelligent("\<c-space>")
+
+" JavaScript
+
+Plug 'pangloss/vim-javascript'
 
 " Markdown
 
@@ -106,6 +133,10 @@ let g:vim_markdown_folding_disabled = 1
 " Supercollider
 
 Plug 'supercollider/scvim'
+
+" TypeScript
+
+Plug 'HerringtonDarkholme/yats'
 
 " WebAssembly
 
