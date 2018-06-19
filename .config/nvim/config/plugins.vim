@@ -45,6 +45,10 @@ nnoremap <Leader>f :CtrlPFunky<Cr>
 Plug 'SirVer/ultisnips'
 " Install https://github.com/fibo/UltiSnips
 
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+let g:deoplete#enable_at_startup = 1
+
 Plug 'myusuf3/numbers.vim'
 
 let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree']
