@@ -45,6 +45,10 @@ nnoremap <Leader>f :CtrlPFunky<Cr>
 Plug 'SirVer/ultisnips'
 " Install https://github.com/fibo/UltiSnips
 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 let g:deoplete#enable_at_startup = 1
