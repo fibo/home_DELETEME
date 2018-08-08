@@ -2,7 +2,7 @@
 
 [![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
 
-This is the script used to [init home](https://github.com/fibo/home/blob/master/README.md#installation).
+This is the script used to [initialize fibo's home](https://github.com/fibo/home/blob/master/README.md#installation).
 
     #!/bin/bash
     #
