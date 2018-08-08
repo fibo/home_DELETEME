@@ -40,9 +40,9 @@
 [submodule ".bash/yyyymmdd"]
 	path = .bash/yyyymmdd
 	url = https://github.com/fibo/yyyymmdd.git
-[submodule "/Users/io/.config/nvim/UltiSnips"]
-	path = /Users/io/.config/nvim/UltiSnips
+[submodule ".config/nvim/UltiSnips"]
+	path = .config/nvim/UltiSnips
 	url = https://github.com/fibo/UltiSnips
-[submodule "/Users/io/.vim/UltiSnips"]
-	path = /Users/io/.vim/UltiSnips
+[submodule ".vim/UltiSnips"]
+	path = .vim/UltiSnips
 	url = https://github.com/fibo/UltiSnips
