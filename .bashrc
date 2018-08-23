@@ -91,3 +91,7 @@ if [ -f ~/.local.bashrc ]; then
 fi
 
 source ~/.bash/dir/fun.sh
+
+NPM_CONFIG_PREFIX=~/.npm-global
+mkdir -p $NPM_CONFIG_PREFIX
+export NPM_CONFIG_PREFIX

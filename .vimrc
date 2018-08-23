@@ -169,7 +169,7 @@ set fileencodings=        " no encoding conversion
 "
 "     :set guifont=*
 
-set guifont=Monaco:h17
+set guifont=Monospace\ 14
 
 " Enable list
 """""""""""""
