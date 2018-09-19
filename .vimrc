@@ -2,8 +2,8 @@
 " Autosource config on exit
 autocmd BufLeave $MYVIMRC :source $MYVIMRC
 
-" Start Vundle config
-"""""""""""""""""""""
+" Vundle config
+"""""""""""""""
 
 set nocompatible      " be iMproved
 filetype off          " required!
@@ -20,12 +20,10 @@ call vundle#begin()
 " required!
 Plugin 'gmarik/Vundle.vim'
 
-" my plugin list here
+" My plugin list here:
 
-" Plugin 'kien/ctrlp.vim'
-" Plugin 'Shougo/unite.vim'
 Plugin 'tpope/vim-fugitive'
-" Plugin 'tpope/vim-surround'
+
 Plugin 'mhinz/vim-startify'
 
 Plugin 'editorconfig/editorconfig-vim'
@@ -33,77 +31,64 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mileszs/ack.vim'
 
 Plugin 'bling/vim-airline'
+
 Plugin 'ntpeters/vim-better-whitespace'
 
-Plugin 'scrooloose/nerdcommenter'
-
 Plugin 'scrooloose/nerdtree'
-" Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 Plugin 'myusuf3/numbers.vim'
 
-" Plugin 'airblade/vim-gitgutter'
-
-" Plugin 'scrooloose/syntastic'
-" Plugin 'myint/syntastic-extras'
-
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
-
 Plugin 'jiangmiao/auto-pairs'
 
-Plugin 'junegunn/vim-emoji'
-
 Plugin 'sirver/ultisnips'
-" Plugin 'honza/vim-snippets'
-
-" Plugin 'ervandew/supertab'
-
-" Languages
-"""""""""""
-
-" Use custom snippets, handcrafted with cunning.
-" Plugin 'honza/vim-snippets'
 
 " JavaScript and related
+
 Plugin 'kern/vim-es7'
 Plugin 'othree/es.next.syntax.vim'
 
-" Plugin 'AndrewRadev/vim-eco'
-" copy its snippets system and write your own "  Plugin 'isRuslan/vim-es6'
-" Plugin 'walm/jshint.vim'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'nikvdp/ejs-syntax'
-" Plugin 'mustache/vim-mustache-handlebars'
+
 Plugin 'elzr/vim-json'
-Plugin 'digitaltoad/vim-pug'
 
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx' " requires pangloss/vim-javascript
 
-" Plugin 'nicklasos/vim-jsx-riot'
-" Plugin 'ryym/vim-riot'
-
-" Plugin 'tpope/vim-haml'
+Plugin 'leafgarland/typescript-vim'
 
 " GLSL
+
 Plugin 'beyondmarc/glsl.vim'
 
 " Jekyll
+
 Plugin 'tpope/vim-liquid'
 
 " Golang
+"
 " install golang, for instance, launch
 "     .software_install Golang
 " then install tools (gocode, goimport, godef, oracle, golint, etc.)
 "     vim +GoInstallBinaries
+
 Plugin 'fatih/vim-go'
 
 " Markdown
 
-" The tabular plugin must come before vim-markdown
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown' " requires godlygeek/tabular
+
+" Color scheme
+
+Plugin 'baskerville/bubblegum'
+
+call vundle#end()
+
+syntax enable
+filetype plugin indent on " required!
+
+" Vundle config end
+"""""""""""""""""""
 
 " Handle paste
 """"""""""""""
@@ -121,29 +106,6 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
-
-" Color schemes
-"""""""""""""""
-
-" Plugin 'chriskempson/base16-vim'
-" Plugin 'altercation/vim-colors-solarized'
-Plugin 'baskerville/bubblegum'
-" Plugin 'flazz/vim-colorschemes'
-Plugin 'sickill/vim-monokai'
-" Plugin 'trapd00r/neverland-vim-theme'
-
-" Color scheme goodies. F8 switches the colorscheme.
-" Plugin 'xolox/vim-misc'
-" Plugin 'xolox/vim-colorscheme-switcher'
-" try Plugin 'Taverius/vim-colorscheme-manager'
-
-call vundle#end()
-
-syntax enable
-filetype plugin indent on " required!
-
-" end Vundle config
-"""""""""""""""""""
 
 " Set gvim window size
 """"""""""""""""""""""
