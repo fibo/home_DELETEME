@@ -24,6 +24,8 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 
+Plugin 'tpope/vim-commentary'
+
 Plugin 'mhinz/vim-startify'
 
 Plugin 'editorconfig/editorconfig-vim'
