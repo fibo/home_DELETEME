@@ -44,6 +44,8 @@ Plugin 'jiangmiao/auto-pairs'
 
 Plugin 'sirver/ultisnips'
 
+Plugin 'alvan/vim-closetag'
+
 " JavaScript and related
 
 Plugin 'kern/vim-es7'
@@ -91,6 +93,9 @@ filetype plugin indent on " required!
 
 " Vundle config end
 """""""""""""""""""
+
+set hidden
+set backspace=indent,eol,start
 
 " Handle paste
 """"""""""""""
@@ -177,14 +182,6 @@ if exists('+colorcolumn')
   set colorcolumn=80
 endif
 
-" Easier split navigations
-""""""""""""""""""""""""""
-
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 " History
 """""""""
 
@@ -194,30 +191,8 @@ set undolevels=1000 " use many much levels of undo
 " Plugins configuration
 """""""""""""""""""""""
 
-" Plugin 'junegunn/vim-emoji'
-
-"autocmd VimEnter * if @% == 'COMMIT_EDITMSG' | set completefunc=emoji#complete | endif
-
-" Plugin 'airblade/vim-gitgutter'
-"
-"silent! if emoji#available()
-"  let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-"  let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
-"  let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
-"  let g:gitgutter_sign_modified_removed = emoji#for('collision')
-"endif
-
-" Plugin 'kien/ctrlp.vim'
-
-" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|^.git$\|_site'
-
-" Plugin 'majutsushi/tagbar'
-let g:tagbar_autoclose = 1
-let g:tagbar_iconchars = ['▸', '▾']
-let g:tagbar_autopreview = 1
-
 " Plugin 'myusuf3/numbers.vim'
-let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3m', 'nerdtree']
+let g:numbers_exclude = ['startify', 'nerdtree']
 
 " Plugin 'bling/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
@@ -231,28 +206,15 @@ function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
-"call NERDTreeHighlightFile('js', 'green', 'none', 'green', '#151515')
 call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-"call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
-"call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
-"call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
-"call NERDTreeHighlightFile('html', 'Red', 'none', '#ffa500', '#151515')
-call NERDTreeHighlightFile('yml', 'Magenta', 'none', '#ff00ff', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
 
 " Toggle NERDTree with CTRL-n
 map <C-n> :NERDTreeToggle<CR>
 
-" Plugin 'scrooloose/syntastic'
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
+" Plugin 'alvan/vim-closetag'
 
-" "let g:syntastic_always_populate_loc_list = 1
-" "let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-
-" Block ZZ if there are syntax errors.
-" nnoremap ZZ :call syntastic_extras#quit_hook()<cr>
+let g:closetag_filenames = '*.html,*.xhtml,*.xml,*js,*jsx,*tsx'
 
 " Mappings
 """"""""""
@@ -317,42 +279,6 @@ autocmd Filetype scss setlocal iskeyword+=-
 
 autocmd Filetype html setlocal iskeyword+=-
 
-" JavaScript
-""""""""""""
-
-" Riot tg files
-au BufNewFile,BufRead *.tag setlocal ft=html
-" au BufNewFile,BufRead *.tag let g:syntastic_javascript_standard_args = "--global opts"
-
-" " To enable JavaScript linters, install them (also feross/standard)
-" " in order to be available to syntastic.
-" "
-" "     npm install jshint eslint standard -g
-" "
-" " Check for jshint config first ...
-" if filereadable('.jshintrc')
-"   let b:syntastic_checkers = ['jshint']
-" " ... then for eslint.
-" elseif filereadable('.eslintrc')
-"   let b:syntastic_checkers = ['eslint']
-" elseif filereadable('.eslintrc.json')
-"   let b:syntastic_checkers = ['eslint']
-" " Fallback to standardjs.
-" else
-"   let b:syntastic_checkers = ['standard']
-"   let g:syntastic_javascript_standard_args = "--global $ --global it --global describe"
-" endif
-
-" TypeScript
-""""""""""""
-
-" let g:tsuquyomi_disable_quickfix = 1
-" let g:syntastic_typescript_checkers = ['tsuquyomi']
-
-" if filereadable('tsconfig.json')
-"   let b:syntastic_checkers = ['tsuquyomi']
-" endif
-
 " CoffeeScript
 """"""""""""""
 
@@ -382,39 +308,3 @@ autocmd BufRead,BufNewFile *.PL setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.pm setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.t  setlocal equalprg=perltidy
 
-" Tagbar settings to recognise Perl Moo..Moose
-" taken from https://gist.github.com/jbolila/7598018
-let g:tagbar_type_perl = {
-    \ 'ctagstype'   : 'Perl',
-    \ 'kinds' : [
-        \ 'p:packages:1:0',
-        \ 'u:uses:1:0',
-        \ 'r:requires:1:0',
-        \ 'e:extends',
-        \ 'w:roles',
-        \ 'o:ours:1:0',
-        \ 'c:constants:1:0',
-        \ 'f:formats:1:0',
-        \ 'a:attributes',
-        \ 's:subroutines',
-        \ 'x:around:1:0',
-        \ 'l:aliases',
-        \ 'd:pod:1:0',
-    \ ],
-\ }
-
-" " Syntastic
-" let g:syntastic_enable_perl_checker = 1
-" let g:syntastic_perl_checkers = [ 'perl' ]
-" let g:syntastic_perl_lib_path = [ './lib' ]
-
-" au BufRead,BufNewFile *.t let  g:syntastic_perl_perlcritic_args="--severity 4 --theme 'test'"
-" au BufRead,BufNewFile *.pl let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'script'"
-" au BufRead,BufNewFile *.pm let g:syntastic_perl_perlcritic_args="--severity 4 --theme 'module'"
-
-" Golang
-"""""""""
-
-" Syntastic
-" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go']  }
