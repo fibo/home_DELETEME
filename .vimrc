@@ -46,6 +46,8 @@ Plugin 'sirver/ultisnips'
 
 Plugin 'alvan/vim-closetag'
 
+Plugin 'kien/ctrlp.vim'
+
 " JavaScript and related
 
 Plugin 'kern/vim-es7'
@@ -173,6 +175,8 @@ set smartcase  " ignore case if search pattern is all lowercase,
                "   case-sensitive otherwise
 set ignorecase " ignore case when searching
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
 " Enhanced cursor
 """""""""""""""""
 
@@ -215,6 +219,14 @@ map <C-n> :NERDTreeToggle<CR>
 " Plugin 'alvan/vim-closetag'
 
 let g:closetag_filenames = '*.html,*.xhtml,*.xml,*js,*jsx,*tsx'
+
+" Plugin 'kien/ctrlp.vim'
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 " Mappings
 """"""""""
