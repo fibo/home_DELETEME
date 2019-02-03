@@ -61,6 +61,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx' " requires pangloss/vim-javascript
 
 Plugin 'leafgarland/typescript-vim'
+Plugin 'HerringtonDarkholme/yats.vim'
 
 " GLSL
 
@@ -218,7 +219,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Plugin 'alvan/vim-closetag'
 
-let g:closetag_filenames = '*.html,*.xhtml,*.xml,*js,*jsx,*tsx'
+let g:closetag_filenames = '*.html,*.xhtml,*.xml,*js,*jsx'
 
 " Plugin 'kien/ctrlp.vim'
 

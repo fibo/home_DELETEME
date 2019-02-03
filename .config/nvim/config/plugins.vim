@@ -36,6 +36,18 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mileszs/ack.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 
+Plug 'w0rp/ale'
+
+let g:airline#extensions#ale#enabled = 1
+" let g:ale_sign_column_always = 1
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+
+
+" Ctrl+j and Ctrl+k to moving between errors
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
 Plug 'tacahiroy/ctrlp-funky'
 
 let g:ctrlp_funky_syntax_highlight = 1
@@ -59,13 +71,13 @@ let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3
 
 Plug 'editorconfig/editorconfig-vim'
 
-Plug 'jiangmiao/auto-pairs'
-
-if has("mac")
-  let g:AutoPairsShortcutFastWrap   = 'Ω' " <M-w>
-else
-  let g:AutoPairsShortcutFastWrap   = '<M-w>'
-endif
+" Plug 'jiangmiao/auto-pairs'
+"
+" if has("mac")
+"   let g:AutoPairsShortcutFastWrap   = 'Ω' " <M-w>
+" else
+"   let g:AutoPairsShortcutFastWrap   = '<M-w>'
+" endif
 
 " Languages
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -145,6 +157,7 @@ Plug 'supercollider/scvim'
 " TypeScript
 
 Plug 'HerringtonDarkholme/yats'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " WebAssembly
 
@@ -159,4 +172,7 @@ Plug 'JarrodCTaylor/spartan'
 
 " Add plugins to &runtimepath
 call plug#end()
+
+" Function calls need to come after call plug#end()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

@@ -57,7 +57,8 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
    'hyperterm-hybrid',
-   'hyperlinks'
+   'hyperlinks',
+   'hyper-transparent'
   // 'hypernasa',
   // 'hyperterm-zenburn2'
   ],
