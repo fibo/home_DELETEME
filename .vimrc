@@ -40,7 +40,11 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'myusuf3/numbers.vim'
 
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-surround'
+" Usage: cs'` inside 'Hello world' transforms it to `Hello world`
+
+" Plugin 'jiangmiao/auto-pairs'
+Plugin 'vim-scripts/auto-pairs-gentle'
 
 Plugin 'sirver/ultisnips'
 
