@@ -4,7 +4,9 @@
 
 call plug#begin('~/.nvim/plugged')
 
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
+
+Plug 'tpope/vim-commentary'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -34,6 +36,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'mileszs/ack.vim'
+
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'w0rp/ale'
@@ -48,6 +51,10 @@ let g:ale_sign_warning = '--'
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
+Plug 'airblade/vim-gitgutter'
+
+Plug 'tpope/vim-commentary'
+
 Plug 'tacahiroy/ctrlp-funky'
 
 let g:ctrlp_funky_syntax_highlight = 1
@@ -55,7 +62,7 @@ let g:ctrlp_funky_syntax_highlight = 1
 nnoremap <Leader>f :CtrlPFunky<Cr>
 
 Plug 'SirVer/ultisnips'
-" Install https://github.com/fibo/UltiSnips
+" My custom snippets here: https://github.com/fibo/UltiSnips
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -71,13 +78,7 @@ let g:numbers_exclude = ['unite', 'tagbar', 'startify', 'gundo', 'vimshell', 'w3
 
 Plug 'editorconfig/editorconfig-vim'
 
-" Plug 'jiangmiao/auto-pairs'
-"
-" if has("mac")
-"   let g:AutoPairsShortcutFastWrap   = 'Ω' " <M-w>
-" else
-"   let g:AutoPairsShortcutFastWrap   = '<M-w>'
-" endif
+Plug 'vim-scripts/auto-pairs-gentle'
 
 " Languages
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

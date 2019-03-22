@@ -52,3 +52,5 @@ au InsertLeave * call ToggleCurline()
 :set iskeyword+=\-
 :set iskeyword+=/
 ":set iskeyword+=\.
+
+set smartcase  " ignore case if search pattern is all lowercase, case-sensitive otherwise
