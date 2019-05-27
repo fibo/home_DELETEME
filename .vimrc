@@ -42,10 +42,9 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'myusuf3/numbers.vim'
 
-Plugin 'tpope/vim-surround'
 " Usage: cs'` inside 'Hello world' transforms it to `Hello world`
+Plugin 'tpope/vim-surround'
 
-" Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-scripts/auto-pairs-gentle'
 
 Plugin 'sirver/ultisnips'
@@ -53,6 +52,10 @@ Plugin 'sirver/ultisnips'
 Plugin 'alvan/vim-closetag'
 
 Plugin 'kien/ctrlp.vim'
+
+" ChucK music
+
+Plugin 'ck.vim'
 
 " JavaScript and related
 
@@ -287,6 +290,23 @@ set copyindent    " copy the previous indentation on autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 
+" Credits: @nobleach in this HN thread
+" https://news.ycombinator.com/item?id=19742599
+inoremap jk <esc>
+" ... and why not this?
+inoremap uu <esc>
+
+" ChucK
+"""""""
+
+autocmd BufNewFile,BufRead *.ck set filetype=ck
+
+" CoffeeScript
+""""""""""""""
+
+autocmd BufRead,BufNewFile *.coffee set filetype=coffee
+autocmd BufRead,BufNewFile *.coffee.md set filetype=coffee
+
 " CSS
 """"""
 
@@ -297,12 +317,6 @@ autocmd Filetype scss setlocal iskeyword+=-
 """"""
 
 autocmd Filetype html setlocal iskeyword+=-
-
-" CoffeeScript
-""""""""""""""
-
-autocmd BufRead,BufNewFile *.coffee set filetype=coffee
-autocmd BufRead,BufNewFile *.coffee.md set filetype=coffee
 
 " Markdown
 """"""""""
