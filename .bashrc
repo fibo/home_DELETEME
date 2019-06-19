@@ -17,7 +17,6 @@ source ~/.bash/yyyymmdd/yyyymmdd.sh
 #     echo /usr/local/bin/bash >> /etc/shells
 #     chsh -s /usr/local/bin/bash
 # See also https://johndjameson.com/blog/updating-your-shell-with-homebrew/
-source ~/.bash/bash-sensible/sensible.bash
 
 # Prompt displays git branch.
 
