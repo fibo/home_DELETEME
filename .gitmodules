@@ -13,9 +13,6 @@
 [submodule ".bash/git-number"]
 	path = .bash/git-number
 	url = https://github.com/holygeek/git-number
-[submodule ".zsh/antigen"]
-	path = .zsh/antigen
-	url = https://github.com/zsh-users/antigen.git
 [submodule ".shell/z"]
 	path = .shell/z
 	url = https://github.com/rupa/z.git
