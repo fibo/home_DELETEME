@@ -16,6 +16,7 @@
 !.eslintrc.json
 !.gitignore
 !.hyper.js
+!.inputrc
 !.screenrc
 !.ssh/agent
 !.shell/aliases
