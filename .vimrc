@@ -26,6 +26,8 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'airblade/vim-gitgutter'
 
+Plugin 'ervandew/supertab'
+
 Plugin 'tpope/vim-commentary'
 
 Plugin 'mhinz/vim-startify'
