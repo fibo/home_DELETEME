@@ -203,7 +203,7 @@ endif
 
 set history=1000    " remember more commands and search history
 set undolevels=1000 " use many much levels of undo
-set undofile " persistent undo, even if you close and reopen Vim
+" set undofile " persistent undo, even if you close and reopen Vim
 
 " Plugins configuration
 """""""""""""""""""""""
@@ -228,6 +228,7 @@ call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
 
 " Toggle NERDTree with CTRL-n
 map <C-n> :NERDTreeToggle<CR>
+
 
 " Plugin 'alvan/vim-closetag'
 
