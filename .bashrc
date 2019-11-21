@@ -83,6 +83,7 @@ fi
 source ~/.shell/z/z.sh
 
 source ~/.bash/completion/npm
+source ~/.bash/completion/git-completion.bash
 
 # Load local profile.
 if [ -f ~/.local.bashrc ]; then
