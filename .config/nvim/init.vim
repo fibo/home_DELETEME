@@ -1,22 +1,29 @@
-"How to
-"""""""
+set encoding=UTF-8
 
-" Enable Python3 support:
-"     sudo apt-get install python3-setuptools
-"     sudo easy_install3 pip
-"     pip3 install --user neovim
-"
-" See also https://neovim.io/doc/user/nvim_python.html
+syntax on
 
-" Install vim-plug with
-" curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+set number
 
-" See ~/.config/nvim/config/plugins.vim for plugins configuration and further
-" installation instructions.
+" Better search
+set hlsearch   " highlight search terms
+set incsearch  " show search matches as you type
+set smartcase  " ignore case if search pattern is all lowercase, case-sensitive otherwise
+set ignorecase " ignore case when searching
 
-" Following suggestion from article
-" https://gregjs.com/vim/2016/do-yourself-a-favor-and-modularize-your-vimrc-init-vim/
-source $HOME/.config/nvim/config/plugins.vim
-source $HOME/.config/nvim/config/general.vim
-source $HOME/.config/nvim/config/keys.vim
+set cursorline
+set cursorcolumn
+
+" it is ok to wrap lines, just use gj or gk to move
+set wrap
+
+" Enable mouse
+set mouse=a
+
+" Open terminal in footer
+nnoremap <leader>t :below 10sp term://$SHELL<cr>i
+" <Esc> to exit from terminal mode
+:tnoremap <Esc> <C-\><C-n>
+
+:nnoremap gb :bnext<CR>
+
+source ~/.config/nvim/plugins.vim
