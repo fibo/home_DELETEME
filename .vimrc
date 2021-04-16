@@ -49,15 +49,9 @@ Plugin 'tpope/vim-surround'
 
 Plugin 'vim-scripts/auto-pairs-gentle'
 
-Plugin 'sirver/ultisnips'
-
 Plugin 'alvan/vim-closetag'
 
 Plugin 'kien/ctrlp.vim'
-
-" ChucK music
-
-Plugin 'ck.vim'
 
 " JavaScript and related
 
@@ -287,8 +281,6 @@ set laststatus=2    " always show status line
 " Use F12 to toggle auto-indenting for text paste
 set pastetoggle=<F12>
 
-set mouse=a
-
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
@@ -299,17 +291,6 @@ set showmatch     " set show matching parenthesis
 inoremap jk <esc>
 " ... and why not this?
 inoremap uu <esc>
-
-" ChucK
-"""""""
-
-autocmd BufNewFile,BufRead *.ck set filetype=ck
-
-" CoffeeScript
-""""""""""""""
-
-autocmd BufRead,BufNewFile *.coffee set filetype=coffee
-autocmd BufRead,BufNewFile *.coffee.md set filetype=coffee
 
 " CSS
 """"""
@@ -344,4 +325,10 @@ autocmd BufRead,BufNewFile *.pl setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.PL setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.pm setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.t  setlocal equalprg=perltidy
+
+" load local vimrc, if any
+try
+  source ~/.local.vimrc
+catch
+endtry
 

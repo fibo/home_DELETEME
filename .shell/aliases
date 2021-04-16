@@ -3,39 +3,21 @@ alias clean_tmp='find /tmp/ -mindepth 1 -maxdepth 1 -user $USER -exec rm -vrf {}
 
 alias gt='go test'
 
-alias ga='git add .; git number'
-alias gb='git branch -a'
+alias ga='git add .'
 alias gc='git commit'
-alias gcb='git checkout -b'
 alias gd='git diff'
 alias gl='git log'
-alias gm='git merge'
-alias gn='git number'
-alias gna='git number add'
-alias gnb='git number blame'
 alias gpl='git pull'
 alias gps='git push'
-alias gr='git remote -v'
-alias gs='git number' # same as git status, plus numbered files
-alias vn='git number -c vim'
-
-alias l='ls -lrth'
-alias ll='ls -lrtha'
+alias gs='git status'
 
 alias vi='vim'
 
-alias sls='screen -ls'
-alias ss='screen -S'
-alias sx='screen -x'
-
-# Do not use sudo, use ssh to switch user
-#     u user
-alias u='ssh localhost -l'
+alias ',,'='cd .. && pwd'
+alias ','='ls -Galrth'
 
 # Load local aliases, can override current aliases.
 
 if [ -e ~/.shell/local.aliases ]; then
 	source ~/.shell/local.aliases
 fi
-
-alias ,,='cd ..; pwd'

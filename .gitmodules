@@ -1,36 +1,15 @@
 [submodule ".vim/bundle/Vundle.vim"]
 	path = .vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim.git
-[submodule ".software"]
-	path = .software
-	url = https://github.com/fibo/.software.git
 [submodule ".bash/git-aware-prompt"]
 	path = .bash/git-aware-prompt
 	url = https://github.com/jimeh/git-aware-prompt
 [submodule ".bash/gh-clone"]
 	path = .bash/gh-clone
 	url = https://github.com/fibo/gh-clone.git
-[submodule ".bash/git-number"]
-	path = .bash/git-number
-	url = https://github.com/holygeek/git-number
-[submodule ".shell/z"]
-	path = .shell/z
-	url = https://github.com/rupa/z.git
-[submodule ".bash/kiss-literate-programming"]
-	path = .bash/kiss-literate-programming
-	url = https://github.com/fibo/kiss-literate-programming
-[submodule ".bash/bb-clone"]
-	path = .bash/bb-clone
-	url = https://github.com/fibo/bb-clone.git
-[submodule ".bash/git-hub"]
-	path = .bash/git-hub
-	url = https://github.com/ingydotnet/git-hub.git
 [submodule ".bash/dir"]
 	path = .bash/dir
 	url = https://github.com/fibo/dir.git
 [submodule ".bash/yyyymmdd"]
 	path = .bash/yyyymmdd
 	url = https://github.com/fibo/yyyymmdd.git
-[submodule ".vim/UltiSnips"]
-	path = .vim/UltiSnips
-	url = https://github.com/fibo/UltiSnips

@@ -6,9 +6,6 @@
 !.bash_login
 !.bin/
 !.ctags
-!.config/nvim/autoload/plug.vim
-!.config/nvim/init.vim
-!.config/nvim/config/
 !.bash
 !.bash_logout
 !.bashrc
@@ -16,14 +13,10 @@
 !.editorconfig
 !.eslintrc.json
 !.gitignore
-!.hyper.js
 !.inputrc
 !.screenrc
 !.ssh/agent
 !.shell/aliases
 !.shell/profile
-!.vim/myUltiSnips/
 !.vimrc
-!.zsh
-!.zshrc
 !.ackrc
