@@ -5,13 +5,10 @@
 !.bash/completion/npm
 !.bash_login
 !.bin/
-!.ctags
 !.bash
 !.bash_logout
 !.bashrc
-!.ctags
 !.editorconfig
-!.eslintrc.json
 !.gitignore
 !.inputrc
 !.screenrc

@@ -4,6 +4,10 @@ export PATH=~/.bin:$PATH
 
 source ~/.shell/aliases
 
+# Reset previous commit
 # Source: http://megakemp.com/2016/08/25/git-undo/
 git config --global alias.undo '!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}};  }; f'
-
+# Modify previous commit
+git config --global alias.amend "commit -a --amend"
+# List files with merge conflicts
+git config --global alias.conflicts "diff --name-only --diff-filter=U"
