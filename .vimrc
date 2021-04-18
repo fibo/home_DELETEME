@@ -124,12 +124,22 @@ function! XTermPasteBegin()
   return ""
 endfunction
 
+" Set gvim window size
+""""""""""""""""""""""
+
+" See http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
+if has("gui_running")
+  " GUI is running or is about to start.
+  " Maximize gvim window.
+  set lines=40 columns=177
+endif
+
 " Use UTF-8 encoding
 """"""""""""""""""""
 
 set encoding=utf8
 set termencoding=utf-8
-set fileencodings=     " no encoding conversion
+set fileencodings=        " no encoding conversion
 
 " Enable list
 """""""""""""
@@ -140,7 +150,7 @@ set list
 " Define characters to show when you show formatting
 set listchars=tab:\|\ ,trail:☠,extends:>,precedes:<,nbsp:+
 
-" It is ok to wrap lines, just use gj or gk to move
+" it is ok to wrap lines, just use gj or gk to move
 set wrap
 
 " Completion
@@ -149,7 +159,7 @@ set wrap
 " Dictionary Word Completion Using Ctrl-x Ctrl-k
 set dictionary+=/usr/share/dict/words
 
-" Natural split opening
+" More natural split opening
 """"""""""""""""""""""""""""
 
 set splitbelow
@@ -180,7 +190,7 @@ endif
 
 set history=1000    " remember more commands and search history
 set undolevels=1000 " use many much levels of undo
-set undofile        " persistent undo, even if you close and reopen Vim
+" set undofile " persistent undo, even if you close and reopen Vim
 
 " Plugins configuration
 """""""""""""""""""""""
@@ -227,6 +237,13 @@ let g:ctrlp_custom_ignore = {
 " Credits to Tom Wyant
 " http://blogs.perl.org/users/neilb/2013/09/a-convention-for-changes-files.html#comment-1154925
 :inoremap <leader>d <C-R>=strftime("%Y-%m-%d")<CR>
+
+" Avoid using CTRL-W in some contexts, e.g. a terminal inside a browser
+" Using SHIFT-h j k l to move to a splitted windows is awesome!
+nmap <S-h> <C-w>h
+nmap <S-j> <C-w>j
+nmap <S-k> <C-w>k
+nmap <S-l> <C-w>l
 
 " Tabs
 """"""
