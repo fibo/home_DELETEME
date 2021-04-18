@@ -20,10 +20,6 @@ export PS1="\u@\h \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
 source ~/.bash/gh-clone/fun.sh
 
-source ~/.bash/git-hub/.rc
-
-export PATH=~/.bash/git-number:$PATH
-
 # How to use an ssh-agent:
 #
 # 1. Create an ssh key, see

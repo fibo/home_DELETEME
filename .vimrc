@@ -51,6 +51,8 @@ Plugin 'vim-scripts/auto-pairs-gentle'
 
 Plugin 'alvan/vim-closetag'
 
+Plugin 'mattn/emmet-vim'
+
 Plugin 'kien/ctrlp.vim'
 
 " JavaScript and related
@@ -122,31 +124,12 @@ function! XTermPasteBegin()
   return ""
 endfunction
 
-" Set gvim window size
-""""""""""""""""""""""
-
-" See http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
-if has("gui_running")
-  " GUI is running or is about to start.
-  " Maximize gvim window.
-  set lines=40 columns=177
-endif
-
 " Use UTF-8 encoding
 """"""""""""""""""""
 
 set encoding=utf8
 set termencoding=utf-8
-set fileencodings=        " no encoding conversion
-
-" Font
-""""""
-
-" To open a font chooser with the fonts available on your system, launch
-"
-"     :set guifont=*
-
-set guifont=Monospace\ 14
+set fileencodings=     " no encoding conversion
 
 " Enable list
 """""""""""""
@@ -157,7 +140,7 @@ set list
 " Define characters to show when you show formatting
 set listchars=tab:\|\ ,trail:☠,extends:>,precedes:<,nbsp:+
 
-" it is ok to wrap lines, just use gj or gk to move
+" It is ok to wrap lines, just use gj or gk to move
 set wrap
 
 " Completion
@@ -166,7 +149,7 @@ set wrap
 " Dictionary Word Completion Using Ctrl-x Ctrl-k
 set dictionary+=/usr/share/dict/words
 
-" More natural split opening
+" Natural split opening
 """"""""""""""""""""""""""""
 
 set splitbelow
@@ -197,7 +180,7 @@ endif
 
 set history=1000    " remember more commands and search history
 set undolevels=1000 " use many much levels of undo
-" set undofile " persistent undo, even if you close and reopen Vim
+set undofile        " persistent undo, even if you close and reopen Vim
 
 " Plugins configuration
 """""""""""""""""""""""
