@@ -1,19 +1,20 @@
 # Ignore everything ...
 *
 # ... except the following files and folders
+!.ackrc
+!.bash
 !.bash/completion/git-completion.bash
 !.bash/completion/npm
 !.bash_login
-!.bin/
-!.bash
 !.bash_logout
 !.bashrc
+!.bin/
 !.editorconfig
 !.gitignore
 !.inputrc
 !.screenrc
-!.ssh/agent
 !.shell/aliases
 !.shell/profile
+!.ssh/agent
+!.vim_plugins
 !.vimrc
-!.ackrc

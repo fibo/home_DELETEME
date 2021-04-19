@@ -2,107 +2,6 @@
 " Autosource config on exit
 autocmd BufLeave $MYVIMRC :source $MYVIMRC
 
-" Vundle config
-"""""""""""""""
-
-set nocompatible      " be iMproved
-filetype off          " required!
-
-" avoid issues on some plugins if we use some shell other than bash
-set shell=/bin/sh
-"""""""""""""""""""""""
-
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
-
-" let Vundle manage Vundle
-" required!
-Plugin 'gmarik/Vundle.vim'
-
-" My plugin list here:
-
-Plugin 'tpope/vim-fugitive'
-
-Plugin 'airblade/vim-gitgutter'
-
-Plugin 'ervandew/supertab'
-
-Plugin 'tpope/vim-commentary'
-
-Plugin 'mhinz/vim-startify'
-
-Plugin 'editorconfig/editorconfig-vim'
-
-Plugin 'mileszs/ack.vim'
-
-Plugin 'bling/vim-airline'
-
-Plugin 'ntpeters/vim-better-whitespace'
-
-Plugin 'scrooloose/nerdtree'
-
-Plugin 'myusuf3/numbers.vim'
-
-" Usage: cs'` inside 'Hello world' transforms it to `Hello world`
-Plugin 'tpope/vim-surround'
-
-Plugin 'vim-scripts/auto-pairs-gentle'
-
-Plugin 'alvan/vim-closetag'
-
-Plugin 'mattn/emmet-vim'
-
-Plugin 'kien/ctrlp.vim'
-
-" JavaScript and related
-
-Plugin 'kern/vim-es7'
-Plugin 'othree/es.next.syntax.vim'
-
-Plugin 'kchmck/vim-coffee-script'
-
-Plugin 'elzr/vim-json'
-
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx' " requires pangloss/vim-javascript
-
-Plugin 'leafgarland/typescript-vim'
-Plugin 'HerringtonDarkholme/yats.vim'
-
-" GLSL
-
-Plugin 'beyondmarc/glsl.vim'
-
-" Jekyll
-
-Plugin 'tpope/vim-liquid'
-
-" Golang
-"
-" install golang, for instance, launch
-"     .software_install Golang
-" then install tools (gocode, goimport, godef, oracle, golint, etc.)
-"     vim +GoInstallBinaries
-
-Plugin 'fatih/vim-go'
-
-" Markdown
-
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown' " requires godlygeek/tabular
-
-" Color scheme
-
-Plugin 'baskerville/bubblegum'
-
-call vundle#end()
-
-syntax enable
-filetype plugin indent on " required!
-
-" Vundle config end
-"""""""""""""""""""
 
 set hidden
 set backspace=indent,eol,start
@@ -192,43 +91,6 @@ set history=1000    " remember more commands and search history
 set undolevels=1000 " use many much levels of undo
 " set undofile " persistent undo, even if you close and reopen Vim
 
-" Plugins configuration
-"""""""""""""""""""""""
-
-" Plugin 'myusuf3/numbers.vim'
-let g:numbers_exclude = ['startify', 'nerdtree']
-
-" Plugin 'bling/vim-airline'
-let g:airline#extensions#tabline#enabled = 1
-
-" Plugin 'fatih/vim-go'
-let g:go_version_warning = 0
-
-" NERDTree File highlighting
-function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
- exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
- exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
-endfunction
-
-call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
-call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
-
-" Toggle NERDTree with CTRL-n
-map <C-n> :NERDTreeToggle<CR>
-
-
-" Plugin 'alvan/vim-closetag'
-
-let g:closetag_filenames = '*.html,*.xhtml,*.xml,*js,*jsx'
-
-" Plugin 'kien/ctrlp.vim'
-
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|node_modules)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
-
 " Mappings
 """"""""""
 
@@ -268,13 +130,6 @@ set t_Co=256
 " See https://kinbiko.com/vim/my-shiniest-vim-gems/
 set formatoptions+=j
 
-" My favourite colorscheme
-try
-  colorscheme bubblegum-256-dark
-catch
-  colorscheme desert
-endtry
-
 set wildmenu        " enhanced command-line completion
 set laststatus=2    " always show status line
 
@@ -291,6 +146,7 @@ set showmatch     " set show matching parenthesis
 inoremap jk <esc>
 " ... and why not this?
 inoremap uu <esc>
+inoremap kj <esc>
 
 " CSS
 """"""
@@ -302,11 +158,6 @@ autocmd Filetype scss setlocal iskeyword+=-
 """"""
 
 autocmd Filetype html setlocal iskeyword+=-
-
-" Markdown
-""""""""""
-
-let g:vim_markdown_folding_disabled = 1
 
 " Perl
 """"""
@@ -325,6 +176,12 @@ autocmd BufRead,BufNewFile *.pl setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.PL setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.pm setlocal equalprg=perltidy
 autocmd BufRead,BufNewFile *.t  setlocal equalprg=perltidy
+
+" load plugins
+try
+  source ~/.vim_plugins
+catch
+endtry
 
 " load local vimrc, if any
 try
