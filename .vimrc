@@ -2,8 +2,15 @@
 " Autosource config on exit
 autocmd BufLeave $MYVIMRC :source $MYVIMRC
 
+" Use UTF-8 encoding
+""""""""""""""""""""
+set encoding=utf8
+set termencoding=utf-8
+set fileencodings=     " no encoding conversion
 
-set hidden
+
+set hidden " abandon a buffer when unloaded
+
 set backspace=indent,eol,start
 
 " Handle paste
@@ -22,23 +29,6 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
-
-" Set gvim window size
-""""""""""""""""""""""
-
-" See http://vim.wikia.com/wiki/Maximize_or_set_initial_window_size
-if has("gui_running")
-  " GUI is running or is about to start.
-  " Maximize gvim window.
-  set lines=40 columns=177
-endif
-
-" Use UTF-8 encoding
-""""""""""""""""""""
-
-set encoding=utf8
-set termencoding=utf-8
-set fileencodings=        " no encoding conversion
 
 " Enable list
 """""""""""""
@@ -63,6 +53,13 @@ set dictionary+=/usr/share/dict/words
 
 set splitbelow
 set splitright
+
+" Avoid using CTRL-W in some contexts, e.g. a terminal inside a browser
+" Using SHIFT-h j k l to move to a splitted windows is awesome!
+nmap <S-h> <C-w>h
+nmap <S-j> <C-w>j
+nmap <S-k> <C-w>k
+nmap <S-l> <C-w>l
 
 " Better search
 """""""""""""""
@@ -91,22 +88,6 @@ set history=1000    " remember more commands and search history
 set undolevels=1000 " use many much levels of undo
 " set undofile " persistent undo, even if you close and reopen Vim
 
-" Mappings
-""""""""""
-
-" Insert current date in yyyy-mm-dd format with \d while in insert mode,
-" useful for comments and Changelogs.
-" Credits to Tom Wyant
-" http://blogs.perl.org/users/neilb/2013/09/a-convention-for-changes-files.html#comment-1154925
-:inoremap <leader>d <C-R>=strftime("%Y-%m-%d")<CR>
-
-" Avoid using CTRL-W in some contexts, e.g. a terminal inside a browser
-" Using SHIFT-h j k l to move to a splitted windows is awesome!
-nmap <S-h> <C-w>h
-nmap <S-j> <C-w>j
-nmap <S-k> <C-w>k
-nmap <S-l> <C-w>l
-
 " Tabs
 """"""
 
@@ -115,13 +96,22 @@ set smarttab   " insert tabs on the start of a line according to
 " Set tab width to 4, I think it improves readability.
 set tabstop=4
 
-" Miscellanea
-"""""""""""""
+
+" use current file directory as a start to find file to edit
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+map ,t :tabe <C-R>=expand("%:p:h") . "/" <CR>
+map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
+" credits to:
+" https://stackoverflow.com/a/1708936
+
+" cycle buffers
+"""""""""""""""
+:nnoremap gb :bnext<CR>
 
 " disable beeping and flashing
 " see http://vim.wikia.com/wiki/Disable_beeping
 set noerrorbells visualbell t_vb=
-autocmd GUIEnter * set visualbell t_vb=
 
 " Better colors when using vim from an ssh terminal
 set t_Co=256
@@ -134,8 +124,6 @@ set wildmenu        " enhanced command-line completion
 set laststatus=2    " always show status line
 
 " Use F12 to toggle auto-indenting for text paste
-set pastetoggle=<F12>
-
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
@@ -148,8 +136,23 @@ inoremap jk <esc>
 inoremap uu <esc>
 inoremap kj <esc>
 
+" JavaScript
+""""""""""""
+
+" console.log hot key: type cll
+"""""""""""""""""""""""""""""""
+" insert mode, puts focus inside parentheses
+imap cll console.log()<Esc><S-f>(a
+" from visual mode on next line, puts visual selection inside parentheses
+vmap cll yocll<Esc>p
+" from normal mode, wraps word under cursor
+nmap cll yiwocll<Esc>p
+" credits to:
+" https://gist.github.com/jasongonzales23/6189da1d82ee05a91edfd53403d6941d
+
+
 " CSS
-""""""
+"""""
 
 autocmd Filetype css setlocal iskeyword+=-
 autocmd Filetype scss setlocal iskeyword+=-
