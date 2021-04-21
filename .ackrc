@@ -10,3 +10,4 @@
 --ignore-dir=static
 # files I usually ignore
 --ignore-file=match:/bundle/
+--ignore-file=match:/package-lock\.json/
