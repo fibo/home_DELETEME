@@ -33,8 +33,6 @@
 " Set tab width to 4, I think it improves readability.
 " set tabstop=4
 
-" Better colors when using vim from an ssh terminal
-" set t_Co=256
 
 " Better comment handling when using J
 " See https://kinbiko.com/vim/my-shiniest-vim-gems/

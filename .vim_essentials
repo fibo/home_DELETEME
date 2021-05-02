@@ -8,6 +8,10 @@ set encoding=utf8
 set termencoding=utf-8
 set fileencodings=     " no encoding conversion
 
+" Better colors when using vim from an ssh terminal
+"""
+set t_Co=256
+
 " Enable list
 """
 set number
@@ -45,7 +49,7 @@ set ignorecase " ignore case when searching
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 " Enhanced cursor
-"""""""""""""""""
+"""
 set cursorcolumn
 set cursorline
 if exists('+colorcolumn')
@@ -82,7 +86,7 @@ inoremap uu <esc>
 inoremap kj <esc>
 
 " console.log hot key: type cll
-"""""""""""""""""""""""""""""""
+"""
 " insert mode, puts focus inside parentheses
 imap cll console.log()<Esc><S-f>(a
 " from visual mode on next line, puts visual selection inside parentheses
