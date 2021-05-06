@@ -47,7 +47,7 @@ export PATH=${NPM_CONFIG_PREFIX}/bin:$PATH
 source ~/.bash/completion/npm
 source ~/.bash/completion/git-completion.bash
 
-# Load local profile.
+# Load local profile, if any.
 if [ -f ~/.local.bashrc ]; then
 	source ~/.local.bashrc
 fi

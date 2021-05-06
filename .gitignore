@@ -16,6 +16,7 @@
 !.shell/aliases
 !.shell/profile
 !.ssh/agent
-!.vim_essentials
-!.vim_plugins
+!.vim_essentials.vim
+!.vim_plugins.vim
 !.vimrc
+!.zshrc

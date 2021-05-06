@@ -121,12 +121,7 @@ endfunction
 call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
 call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
 
-" Toggle NERDTree with CTRL-n
-map <C-n> :NERDTreeToggle<CR>
-
-
 " Plugin 'alvan/vim-closetag'
-
 let g:closetag_filenames = '*.html,*.xhtml,*.xml,*js,*jsx'
 
 " Markdown

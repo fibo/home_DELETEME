@@ -77,18 +77,15 @@
 " autocmd BufRead,BufNewFile *.t  setlocal equalprg=perltidy
 
 " vim / neovim common configuration
-try
-  source ~/.vim_essentials
-catch
-endtry
+"""
+source ~/.vim_essentials.vim
 
 " load plugins
-try
-  source ~/.vim_plugins
-catch
-endtry
+"""
+source ~/.vim_plugins.vim
 
 " load local vimrc, if any
+"""
 try
   source ~/.local.vimrc
 catch
