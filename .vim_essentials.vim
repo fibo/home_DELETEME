@@ -31,12 +31,12 @@ set splitbelow
 set splitright
 
 " Avoid using CTRL-W in some contexts, e.g. a terminal inside a browser
-" Using SHIFT-h j k l to move to a splitted windows is awesome!
+" Using CTRL-h j k l to move to a splitted windows is awesome!
 """
-nmap <S-h> <C-w>h
-nmap <S-j> <C-w>j
-nmap <S-k> <C-w>k
-nmap <S-l> <C-w>l
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
 " Better search
 """
