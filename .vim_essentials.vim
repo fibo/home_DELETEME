@@ -60,7 +60,6 @@ endif
 """""""""
 set history=1000    " remember more commands and search history
 set undolevels=1000 " use many much levels of undo
-set undofile " persistent undo, even if you close and reopen Vim
 
 " Use current file directory as a start to find file to edit
 """
