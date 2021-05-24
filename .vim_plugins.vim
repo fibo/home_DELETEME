@@ -36,8 +36,6 @@ Plugin 'bling/vim-airline'
 
 Plugin 'ntpeters/vim-better-whitespace'
 
-Plugin 'scrooloose/nerdtree'
-
 Plugin 'myusuf3/numbers.vim'
 
 " Usage: cs'` inside 'Hello world' transforms it to `Hello world`
@@ -51,13 +49,6 @@ Plugin 'mattn/emmet-vim'
 
 Plugin 'kien/ctrlp.vim'
 
-" JavaScript and related
-
-Plugin 'kern/vim-es7'
-Plugin 'othree/es.next.syntax.vim'
-
-Plugin 'kchmck/vim-coffee-script'
-
 Plugin 'elzr/vim-json'
 
 Plugin 'pangloss/vim-javascript'
@@ -66,22 +57,9 @@ Plugin 'mxw/vim-jsx' " requires pangloss/vim-javascript
 Plugin 'leafgarland/typescript-vim'
 Plugin 'HerringtonDarkholme/yats.vim'
 
-" GLSL
-
-Plugin 'beyondmarc/glsl.vim'
-
 " Jekyll
 
 Plugin 'tpope/vim-liquid'
-
-" Golang
-"
-" install golang, for instance, launch
-"     .software_install Golang
-" then install tools (gocode, goimport, godef, oracle, golint, etc.)
-"     vim +GoInstallBinaries
-
-Plugin 'fatih/vim-go'
 
 " Markdown
 
