@@ -94,3 +94,7 @@ vmap cll yocll<Esc>p
 nmap cll yiwocll<Esc>p
 " credits to:
 " https://gist.github.com/jasongonzales23/6189da1d82ee05a91edfd53403d6941d
+
+" Quote word under cursor, by typing a double quote char
+"""
+nmap " ebi"<Esc>xep
