@@ -2,6 +2,7 @@
 ##
 --smart-case
 # folders I usually do not want to look into
+--ignore-dir=.next
 --ignore-dir=.nyc_output
 --ignore-dir=.yarn
 --ignore-dir=_site
