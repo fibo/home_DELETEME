@@ -1,3 +1,7 @@
+# Be a cowboy console, use GNU Screen!
+#
+# Read my tutorial here: https://fibo.github.io/2015/05/gnu-screen/
+###
 vbell off           # Turns visual bell off
 shell -$SHELL       # Load shell profile
 defscrollback 32000 # Set a large scrollback buffer
