@@ -9,8 +9,6 @@ fi
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-source ~/.bash/yyyymmdd/yyyymmdd.sh
-
 # Prompt displays git branch.
 
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
@@ -18,29 +16,21 @@ source $GITAWAREPROMPT/main.sh
 
 export PS1="\u@\h \[$txtgrn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 
-source ~/.bash/gh-clone/fun.sh
-
-# How to use an ssh-agent:
+# To use an ssh-agent, create an SSH key. See
 #
-# 1. Create an ssh key, see
-#
-#    http://g14n.info/2013/04/getting-started-with-git-shell/#ssh-public-key-based-authentication
-#
-#    but, do NOT leave the passphrase empty.
-#
-# 2. Copy script
-#
-#    from ~/.bash/ssh-agent
-#    to ~/.ssh/agent
+#    https://fibo.github.io/2013/04/getting-started-with-git-shell/#ssh-public-key-based-authentication
 #
 if [ -f ~/.ssh/agent ]; then
 	. ~/.ssh/agent
 fi
 
-source ~/.bash/dir/fun.sh
+# Source utils.
 
-# Load local profile, if any.
-if [ -f ~/.local.bashrc ]; then
-	source ~/.local.bashrc
+source ~/.shell/dir/fun.sh
+source ~/.shell/gh-clone/fun.sh
+
+# Load local bash profile, if any.
+if [ -f ~/.local/bashrc ]; then
+	source ~/.local/bashrc
 fi
 
