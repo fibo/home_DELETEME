@@ -1,20 +1,21 @@
+alias ga='git add .'
+alias gc='git commit'
+alias gd='git diff'
+alias gl='git log --graph'
+alias gpl='git pull'
+alias gps='git push'
+alias gpsf='git push --force-with-lease'
+alias gs='git status'
+
+alias ns='npm start'
+alias nt='npm test'
+
+alias ',,'='cd .. && pwd'
+alias ','='ls -Galrth'
 
 alias clean_tmp='find /tmp/ -mindepth 1 -maxdepth 1 -user $USER -exec rm -vrf {} \;'
 
 alias gt='go test'
-
-alias ga='git add .'
-alias gc='git commit'
-alias gd='git diff'
-alias gl='git log'
-alias gpl='git pull'
-alias gps='git push'
-alias gs='git status'
-
-alias vi='vim'
-
-alias ',,'='cd .. && pwd'
-alias ','='ls -Galrth'
 
 # Load local aliases, can override current aliases.
 

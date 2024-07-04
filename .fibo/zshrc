@@ -1,0 +1,28 @@
+# Load this file into ~/.zshrc
+#
+# Many tools on Mac will write ~/.zshrc when installed,
+# it does not make sense to version that file.
+
+# Shell prompt
+###
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%b · '
+setopt PROMPT_SUBST
+PROMPT='${vcs_info_msg_0_}%2~ '
+
+# Autocompletion
+###
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit
+compinit -i
+
+# enable bash like comments in shell
+setopt interactivecomments
+
+# Source utils
+
+source ~/.shell/cleanup_git_branches/fun.sh
+source ~/.shell/dir/fun.sh
+source ~/.shell/gh-clone/fun.sh
+

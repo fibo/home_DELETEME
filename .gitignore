@@ -7,7 +7,7 @@
 !.bash_logout
 !.bashrc
 !.editorconfig
-!.fibo/bin/
+!.fibo/
 !.gitignore
 !.inputrc
 !.screenrc
@@ -17,4 +17,3 @@
 !.vim_essentials.vim
 !.vim_plugins.vim
 !.vimrc
-!.zshrc

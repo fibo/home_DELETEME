@@ -26,6 +26,7 @@ fi
 
 # Source utils.
 
+source ~/.shell/cleanup_git_branches/fun.sh
 source ~/.shell/dir/fun.sh
 source ~/.shell/gh-clone/fun.sh
 
