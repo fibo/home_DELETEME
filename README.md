@@ -1,12 +1,12 @@
 # init home
 
-[![KLP](https://img.shields.io/badge/kiss-literate-orange.svg)](http://g14n.info/kiss-literate-programming)
+[![KLP](https://fibo.github.io/svg/klp-badge.svg)](https://fibo.github.io/kiss-literate-programming)
 
-This is the script used to [initialize fibo's home](https://github.com/fibo/home/blob/master/README.md#installation).
+This is the script used to [initialize fibo's home](https://github.com/fibo/home/blob/main/README.md#installation).
 
     #!/bin/bash
     #
-    # For more information see https://github.com/fibo/home/blob/master/README.md#installation
+    # For more information see https://github.com/fibo/home/blob/gh-pages/README.md
     
 Start from `$HOME` dir
 
@@ -84,10 +84,6 @@ Install vim plugins, I ❤ this part
     fi
 
 ## Finally
-
-Load changes into current session.
-
-    source ~/.bashrc
 
 Back to previous folder.
 
