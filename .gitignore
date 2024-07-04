@@ -3,8 +3,6 @@
 # ... except the following files and folders
 !.ackrc
 !.bash
-!.bash/completion/git-completion.bash
-!.bash/completion/npm
 !.bash_login
 !.bash_logout
 !.bashrc

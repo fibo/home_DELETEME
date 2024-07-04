@@ -39,14 +39,6 @@ fi
 
 source ~/.bash/dir/fun.sh
 
-NPM_CONFIG_PREFIX=~/.npm-global
-mkdir -p $NPM_CONFIG_PREFIX
-export NPM_CONFIG_PREFIX
-export PATH=${NPM_CONFIG_PREFIX}/bin:$PATH
-
-source ~/.bash/completion/npm
-source ~/.bash/completion/git-completion.bash
-
 # Load local profile, if any.
 if [ -f ~/.local.bashrc ]; then
 	source ~/.local.bashrc
