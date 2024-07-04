@@ -8,8 +8,8 @@
 !.bash_login
 !.bash_logout
 !.bashrc
-!.bin/
 !.editorconfig
+!.fibo/bin/
 !.gitignore
 !.inputrc
 !.screenrc
