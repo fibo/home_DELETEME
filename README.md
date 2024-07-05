@@ -22,7 +22,7 @@ curl -L https://fibo.github.io/home/init.sh | bash
 
 ## Update
 
-To update to latest version: go to `$HOME`, pull updates and submodules
+To update to latest version: go to your `$HOME`, pull updates and submodules
 
 ```sh
 cd
@@ -54,11 +54,10 @@ git push
 
 ### Add submodule
 
-Add a new submodule, moving into your home and providing a relative path.
+To add a new submodule, launch something like
 
 ```sh
-cd
-git submodule add -f https://github.com/foo/bar.git home/relative/path/to/foo/bar
+git submodule add -f https://github.com/foo/bar.git ./relative/path/to/foo/bar
 ```
 
 ### Update all submodules
