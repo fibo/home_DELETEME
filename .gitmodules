@@ -2,11 +2,14 @@
 	path = .bash/git-aware-prompt
 	url = https://github.com/jimeh/git-aware-prompt
 [submodule ".shell/gh-clone"]
-	path = .bash/gh-clone
+	path = .shell/gh-clone
 	url = https://github.com/fibo/gh-clone.git
 [submodule ".shell/dir"]
-	path = .bash/dir
+	path = .shell/dir
 	url = https://github.com/fibo/dir.git
 [submodule ".vim/bundle/Vundle.vim"]
 	path = .vim/bundle/Vundle.vim
 	url = https://github.com/gmarik/Vundle.vim.git
+[submodule "shell/cleanup_git_branches"]
+	path = shell/cleanup_git_branches
+	url = https://github.com/fibo/cleanup_git_branches.git
