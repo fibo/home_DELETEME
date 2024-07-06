@@ -2,7 +2,7 @@
 *
 # ... except the following files and folders
 !.ackrc
-!.bash
+!.bash/git-aware-prompt
 !.bash_login
 !.bash_logout
 !.bashrc
@@ -12,6 +12,9 @@
 !.inputrc
 !.screenrc
 !.shell/aliases
+!.shell/cleanup_git_branches
+!.shell/dir
+!.shell/gh-clone
 !.shell/profile
 !.ssh/agent
 !.vimrc
