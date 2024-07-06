@@ -1,3 +1,4 @@
+# Git
 alias ga='git add .'
 alias gc='git commit'
 alias gd='git diff'
@@ -7,18 +8,11 @@ alias gps='git push'
 alias gpsf='git push --force-with-lease'
 alias gs='git status'
 
+# npm
 alias ns='npm start'
 alias nt='npm test'
 
+# Go to up folder
 alias ',,'='cd .. && pwd'
+" List files and folders
 alias ','='ls -Galrth'
-
-alias clean_tmp='find /tmp/ -mindepth 1 -maxdepth 1 -user $USER -exec rm -vrf {} \;'
-
-alias gt='go test'
-
-# Load local aliases, can override current aliases.
-
-if [ -e ~/.shell/local.aliases ]; then
-	source ~/.shell/local.aliases
-fi

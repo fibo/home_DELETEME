@@ -3,6 +3,8 @@
 # Many tools on Mac will write ~/.zshrc when installed,
 # it does not make sense to version that file.
 
+source ~/.shell/profile
+
 # Shell prompt
 ###
 autoload -Uz vcs_info
