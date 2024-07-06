@@ -1,6 +1,3 @@
-[submodule ".bash/git-aware-prompt"]
-	path = .bash/git-aware-prompt
-	url = https://github.com/jimeh/git-aware-prompt
 [submodule ".shell/gh-clone"]
 	path = .shell/gh-clone
 	url = https://github.com/fibo/gh-clone.git
@@ -10,3 +7,6 @@
 [submodule ".shell/cleanup_git_branches"]
 	path = .shell/cleanup_git_branches
 	url = https://github.com/fibo/cleanup_git_branches.git
+[submodule ".bash/git-aware-prompt"]
+	path = .bash/git-aware-prompt
+	url = https://github.com/jimeh/git-aware-prompt.git
