@@ -1,6 +1,3 @@
-[submodule ".shell/gh-clone"]
-	path = .shell/gh-clone
-	url = https://github.com/fibo/gh-clone.git
 [submodule ".shell/dir"]
 	path = .shell/dir
 	url = https://github.com/fibo/dir.git
