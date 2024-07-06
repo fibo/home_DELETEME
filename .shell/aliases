@@ -14,5 +14,5 @@ alias nt='npm test'
 
 # Go to up folder
 alias ',,'='cd .. && pwd'
-" List files and folders
+# List files and folders
 alias ','='ls -Galrth'
