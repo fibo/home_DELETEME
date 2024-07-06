@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# For more information see https://github.com/fibo/home/blob/master/README.md#installation
+# For more information see https://github.com/fibo/home/blob/gh-pages/README.md
 
 cd
 [ -d .git ] && rm -rf .git
@@ -24,22 +24,7 @@ git init
 git checkout -b home
 git remote add my https://github.com/fibo/home.git
 git pull my home
-git submodule init
-git submodule update --recursive --remote
+git submodule update --init
 git submodule foreach git config core.fileMode false
-vim +PluginInstall +qall
-GIT_USER=$(git config --global user.name)
-if [ -z "$GIT_USER" ]
-then
-    read -t 60 -p "[git config] Enter your user.name: " GIT_USER
-    git config --global user.name $GIT_USER
-fi
-GIT_EMAIL=$(git config --global user.email)
-if [ -z "$GIT_EMAIL" ]
-then
-    read -t 60 -p "[git config] Enter your user.email: " GIT_EMAIL
-    git config --global user.email $GIT_EMAIL
-fi
-source ~/.bashrc
 cd -
 echo home sweet home

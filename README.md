@@ -59,30 +59,6 @@ Init submodules, ignore file mode changes
     git submodule update --init
     git submodule foreach git config core.fileMode false
 
-Install vim plugins, I ❤ this part
-
-    vim +PluginInstall +qall
-
-## Basic git configuration prompt
-
-### git user.name
-
-    GIT_USER=$(git config --global user.name)
-    if [ -z "$GIT_USER" ]
-    then
-        read -t 60 -p "[git config] Enter your user.name: " GIT_USER
-        git config --global user.name $GIT_USER
-    fi
-
-### git user.email
-
-    GIT_EMAIL=$(git config --global user.email)
-    if [ -z "$GIT_EMAIL" ]
-    then
-        read -t 60 -p "[git config] Enter your user.email: " GIT_EMAIL
-        git config --global user.email $GIT_EMAIL
-    fi
-
 ## Finally
 
 Back to previous folder.
