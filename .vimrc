@@ -9,34 +9,17 @@ set termencoding=utf-8
 set fileencodings=     " no encoding conversion
 
 " Better colors when using vim from an ssh terminal
-"""
 set t_Co=256
 
-" Enable list
-"""
 set number
-set list
-
-" Define characters to show when you show formatting
-"""
-set listchars=tab:\|\ ,trail:☠,extends:>,precedes:<,nbsp:+
 
 " It is ok to wrap lines, just use gj or gk to move
-"""
 set wrap
 
 " More natural split opening
 """
 set splitbelow
 set splitright
-
-" Avoid using CTRL-W in some contexts, e.g. a terminal inside a browser
-" Using CTRL-h j k l to move to a splitted windows is awesome!
-"""
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
 
 " Better search
 """
@@ -69,9 +52,6 @@ map ,s :split <C-R>=expand("%:p:h") . "/" <CR>
 " credits to:
 " https://stackoverflow.com/a/1708936
 
-" cycle buffers
-"""
-:nnoremap gb :bnext<CR>
 
 " disable beeping and flashing
 " see http://vim.wikia.com/wiki/Disable_beeping
